@@ -362,23 +362,31 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
           <pattern id="zariPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
             <path d="M0,4 L4,0 L8,4 L4,8 Z" fill="none" stroke="rgba(255,215,0,0.15)" stroke-width=".5"/>
           </pattern>
-          <!-- Portrait medallion gradients -->
-          <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#c8780a"/><stop offset="40%" stop-color="#ffd700"/><stop offset="100%" stop-color="#c8780a"/>
+          <!-- ── Peacock gradients ── -->
+          <linearGradient id="peacockBody" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1e8070"/><stop offset="50%" stop-color="#0d5848"/><stop offset="100%" stop-color="#083830"/>
           </linearGradient>
-          <radialGradient id="portraitBgG" cx="38%" cy="30%" r="70%">
-            <stop offset="0%" stop-color="#1e0630"/><stop offset="100%" stop-color="#07021a"/>
-          </radialGradient>
-          <radialGradient id="portraitBgB" cx="62%" cy="30%" r="70%">
-            <stop offset="0%" stop-color="#280520"/><stop offset="100%" stop-color="#0d0215"/>
-          </radialGradient>
-          <filter id="portraitGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="10" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <!-- Clip masks for portrait circles -->
-          <clipPath id="groomClip"><circle cx="165" cy="285" r="68"/></clipPath>
-          <clipPath id="brideClip"><circle cx="515" cy="285" r="68"/></clipPath>
+          <linearGradient id="peacockNeck" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#28a878"/><stop offset="100%" stop-color="#0d6048"/>
+          </linearGradient>
+          <linearGradient id="featherVane" x1="0%" y1="100%" x2="0%" y2="0%">
+            <stop offset="0%" stop-color="#7a5820" stop-opacity="0.45"/>
+            <stop offset="30%" stop-color="#2a9870" stop-opacity="0.68"/>
+            <stop offset="70%" stop-color="#1a7868" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#0d4838" stop-opacity="0.42"/>
+          </linearGradient>
+          <!-- ── Peacock tail feather template (points upward, 200 px) ── -->
+          <g id="pfBase">
+            <path d="M 0,0 C -4,-30 -16,-70 -14,-110 C -10,-150 -4,-175 0,-200 C 4,-175 10,-150 14,-110 C 16,-70 4,-30 0,0 Z" fill="url(#featherVane)"/>
+            <line x1="0" y1="0" x2="0" y2="-200" stroke="#9a7a28" stroke-width="1.6" opacity="0.62"/>
+            <ellipse cx="0" cy="-186" rx="15" ry="11" fill="#081640"/>
+            <ellipse cx="0" cy="-186" rx="11" ry="8" fill="#1848a8"/>
+            <ellipse cx="0" cy="-186" rx="7.5" ry="5.5" fill="#18c8a0"/>
+            <circle cx="0" cy="-186" r="3.5" fill="#060a20"/>
+            <circle cx="0" cy="-186" r="1.8" fill="#ffd700"/>
+            <ellipse cx="0" cy="-186" rx="17" ry="13" fill="none" stroke="rgba(255,215,0,0.42)" stroke-width="1.2"/>
+            <path d="M -2,-197 C -4,-207 -2,-213 0,-215 C 2,-213 4,-207 2,-197" fill="#28b890" opacity="0.72"/>
+          </g>
         </defs>
 
         <!-- ── FLOOR / MAT ── -->
@@ -462,230 +470,153 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
         <path d="M333,305 Q328,285 335,270 Q340,258 337,245" stroke="rgba(200,200,180,.18)" stroke-width="3" fill="none" stroke-linecap="round"/>
         <path d="M347,300 Q354,280 349,265 Q344,250 350,238" stroke="rgba(200,200,180,.15)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- ══════════════════════════════════════════════ -->
-        <!-- ── GROOM PORTRAIT MEDALLION ── -->
-        <!-- ══════════════════════════════════════════════ -->
-        <!-- Soft atmospheric halo behind frame -->
-        <circle cx="165" cy="285" r="96" fill="rgba(200,140,0,0.04)"/>
-        <circle cx="165" cy="285" r="86" fill="rgba(200,140,0,0.06)"/>
-        <!-- Outer decorative gold ring -->
-        <circle cx="165" cy="285" r="78" fill="none" stroke="url(#goldRing)" stroke-width="5"/>
-        <!-- Dark band inside outer ring -->
-        <circle cx="165" cy="285" r="73" fill="#08021a"/>
-        <!-- Inner fine gold ring -->
-        <circle cx="165" cy="285" r="70" fill="none" stroke="url(#goldRing)" stroke-width="1.5"/>
-        <!-- Portrait field background -->
-        <circle cx="165" cy="285" r="68" fill="url(#portraitBgG)"/>
-
-        <!-- Portrait silhouette — clipped to circle -->
-        <g clip-path="url(#groomClip)">
-          <!-- ── Sherwani / Chest (bottom of circle) ── -->
-          <path d="M 97,360 L 233,360 L 233,324 C 215,316 192,312 165,312 C 138,312 115,316 97,324 Z" fill="url(#groomSherwani)"/>
-          <!-- Zari top border on sherwani -->
-          <path d="M 97,326 C 115,318 140,314 165,314 C 190,314 215,318 233,326" fill="none" stroke="#ffd700" stroke-width="1.5" opacity="0.55"/>
-          <!-- Central button placket -->
-          <line x1="165" y1="312" x2="165" y2="360" stroke="rgba(255,215,0,0.38)" stroke-width="1.5"/>
-          <circle cx="165" cy="320" r="2.5" fill="rgba(255,215,0,0.65)"/>
-          <circle cx="165" cy="331" r="2.5" fill="rgba(255,215,0,0.65)"/>
-          <circle cx="165" cy="342" r="2.5" fill="rgba(255,215,0,0.65)"/>
-          <!-- Sherwani zari texture overlay -->
-          <path d="M 97,324 L 233,324 L 233,360 L 97,360 Z" fill="url(#zariPattern)" opacity="0.22"/>
-          <!-- Angavastram — gold stole over left shoulder -->
-          <path d="M 120,316 C 112,332 108,350 110,368" stroke="rgba(255,183,0,0.72)" stroke-width="13" fill="none" stroke-linecap="round"/>
-          <path d="M 120,316 C 112,332 108,350 110,368" stroke="rgba(255,215,0,0.3)" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <!-- Sherwani collar V-neck -->
-          <path d="M 148,312 C 155,305 161,302 165,300 C 169,302 175,305 182,312" fill="none" stroke="rgba(255,215,0,0.4)" stroke-width="1.5"/>
-          <!-- ── Neck ── -->
-          <path d="M 157,312 C 155,302 155,290 157,280 C 159,272 162,268 165,267 C 168,268 171,272 173,280 C 175,290 175,302 173,312 Z" fill="url(#groomSkin)"/>
-          <!-- ── Face — oval portrait, slightly tilted ── -->
-          <ellipse cx="166" cy="258" rx="30" ry="36" fill="url(#groomSkin)" transform="rotate(-4,166,258)"/>
-          <!-- Subtle facial shading on cheek/jaw -->
-          <ellipse cx="152" cy="268" rx="8" ry="10" fill="rgba(0,0,0,0.05)"/>
-          <!-- ── Eyes ── -->
-          <!-- Left eye -->
-          <path d="M 150,256 C 153,253 157,252 160,254 C 157,258 153,259 150,256 Z" fill="#1a0808"/>
-          <path d="M 151,252 C 155,250 159,250 162,252" stroke="#1a0808" stroke-width="1.5" fill="none" opacity="0.75"/>
-          <circle cx="155" cy="255" r="1.5" fill="white" opacity="0.4"/>
-          <!-- Right eye -->
-          <path d="M 169,254 C 173,251 178,250 181,252 C 178,256 173,257 169,254 Z" fill="#1a0808"/>
-          <path d="M 170,251 C 174,248 179,248 182,250" stroke="#1a0808" stroke-width="1.5" fill="none" opacity="0.75"/>
-          <circle cx="175" cy="253" r="1.5" fill="white" opacity="0.4"/>
-          <!-- ── Nose — gentle shadow ── -->
-          <path d="M 169,264 C 171,269 172,274 170,277 C 168,279 165,279 163,277 C 165,274 167,270 169,264 Z" fill="rgba(0,0,0,0.07)"/>
-          <!-- Nose base line -->
-          <path d="M 162,277 C 165,275 168,275 171,277" stroke="rgba(80,30,0,0.18)" stroke-width="1" fill="none"/>
-          <!-- ── Lips ── -->
-          <path d="M 159,281 C 162,279 167,279 171,281" stroke="#b05050" stroke-width="1.8" fill="rgba(180,80,80,0.15)" opacity="0.75"/>
-          <path d="M 160,284 C 163,286 168,286 172,284" stroke="#b05050" stroke-width="1.2" fill="none" opacity="0.55"/>
-          <!-- ── Left ear ── -->
-          <path d="M 136,256 C 134,260 134,267 136,272 C 138,274 140,273 141,270 C 139,265 138,260 136,256 Z" fill="url(#groomSkin)" stroke="rgba(0,0,0,0.08)" stroke-width="0.5"/>
-          <!-- Small ear stud -->
-          <circle cx="137" cy="265" r="2.5" fill="#ffd700" opacity="0.7"/>
-          <!-- ── Turban ── covers the top of head seamlessly -->
-          <path d="M 136,263 C 133,249 134,234 140,223 C 148,212 159,206 167,205 C 175,204 186,210 192,221 C 198,232 199,246 197,258 C 190,251 182,247 173,246 C 163,245 150,249 140,258 C 139,260 137,262 136,263 Z" fill="url(#groomTurban)"/>
-          <!-- Turban wrap folds -->
-          <path d="M 139,251 C 155,245 173,244 190,248" stroke="rgba(210,170,0,0.5)" stroke-width="1.8" fill="none"/>
-          <path d="M 137,259 C 154,254 174,253 193,257" stroke="rgba(210,170,0,0.3)" stroke-width="1.2" fill="none"/>
-          <!-- Turban fan / side tail (right) -->
-          <path d="M 197,250 C 207,239 212,225 207,214 C 201,217 198,231 197,250 Z" fill="url(#groomTurban)" opacity="0.88"/>
-          <!-- Gold trim on turban edge -->
-          <path d="M 197,250 C 207,239 212,225 207,214" stroke="rgba(255,215,0,0.4)" stroke-width="1" fill="none"/>
-          <!-- ── Kalgi jewel ── -->
-          <circle cx="170" cy="208" r="8" fill="#ffd700"/>
-          <circle cx="170" cy="208" r="6" fill="#c4607a"/>
-          <circle cx="170" cy="208" r="3.5" fill="#ffd700"/>
-          <circle cx="170" cy="208" r="1.8" fill="white" opacity="0.85"/>
-          <!-- Kalgi feather rays -->
-          <line x1="170" y1="200" x2="170" y2="193" stroke="#ffd700" stroke-width="1.5"/>
-          <line x1="177" y1="203" x2="182" y2="197" stroke="#ffd700" stroke-width="1.2"/>
-          <line x1="163" y1="203" x2="158" y2="197" stroke="#ffd700" stroke-width="1.2"/>
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- ── LEFT PEACOCK — sacred guardian of the fire (facing right) ── -->
+        <!-- ════════════════════════════════════════════════════════════════ -->
+        <!-- ════ LEFT PEACOCK — tail fan (drawn first, behind body) ════ -->
+        <!-- 9 feathers fanning from -45° to +42° around tail origin -->
+        <g transform="translate(148,360)">
+          <use href="#pfBase" transform="rotate(-45)" opacity="0.80"/>
+          <use href="#pfBase" transform="rotate(-34)" opacity="0.85"/>
+          <use href="#pfBase" transform="rotate(-23)" opacity="0.90"/>
+          <use href="#pfBase" transform="rotate(-12)" opacity="0.94"/>
+          <use href="#pfBase" transform="rotate(-1)"/>
+          <use href="#pfBase" transform="rotate(10)"/>
+          <use href="#pfBase" transform="rotate(21)" opacity="0.94"/>
+          <use href="#pfBase" transform="rotate(31)" opacity="0.88"/>
+          <use href="#pfBase" transform="rotate(40)" opacity="0.80"/>
         </g>
+        <!-- Iridescent glow behind the tail -->
+        <ellipse cx="130" cy="300" rx="70" ry="80" fill="rgba(20,140,100,0.06)"/>
 
-        <!-- Frame cardinal ornaments (outside clip) -->
-        <!-- Top ornament = Kalgi jewel (identifies groom) -->
-        <circle cx="165" cy="202" r="9" fill="#ffd700"/>
-        <circle cx="165" cy="202" r="6.5" fill="#c4607a"/>
-        <circle cx="165" cy="202" r="3.5" fill="#ffd700"/>
-        <circle cx="165" cy="202" r="1.5" fill="white" opacity="0.85"/>
-        <line x1="165" y1="193" x2="165" y2="185" stroke="#ffd700" stroke-width="2"/>
-        <line x1="173" y1="196" x2="178" y2="190" stroke="#ffd700" stroke-width="1.5"/>
-        <line x1="157" y1="196" x2="152" y2="190" stroke="#ffd700" stroke-width="1.5"/>
-        <circle cx="165" cy="365" r="5.5" fill="#ffd700"/><circle cx="165" cy="365" r="3.5" fill="#fffbf0"/>
-        <circle cx="85" cy="285" r="5.5" fill="#ffd700"/><circle cx="85" cy="285" r="3.5" fill="#fffbf0"/>
-        <circle cx="245" cy="285" r="5.5" fill="#ffd700"/><circle cx="245" cy="285" r="3.5" fill="#fffbf0"/>
-        <!-- Frame 45° ornament dots -->
-        <circle cx="111" cy="231" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="219" cy="231" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="111" cy="339" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="219" cy="339" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <!-- Groom name label -->
-        <text x="165" y="392" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#ffd700" letter-spacing="3" opacity="0.92">MUTHU</text>
+        <!-- ════ LEFT PEACOCK — body, neck, head ════ -->
+        <!-- Tail-base connection patch -->
+        <ellipse cx="136" cy="366" rx="16" ry="18" fill="#082c20" opacity="0.6"/>
+        <!-- Body (deep teal, slightly rotated toward right/fire) -->
+        <ellipse cx="162" cy="366" rx="44" ry="29" fill="url(#peacockBody)" transform="rotate(-12,162,366)" filter="url(#glowFilter)"/>
+        <!-- Wing arc — lighter sweep on body upper surface -->
+        <path d="M 132,352 C 150,340 174,337 193,348" stroke="rgba(50,210,150,0.38)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <!-- Secondary wing feather lines -->
+        <path d="M 136,358 C 155,350 172,348 190,356" stroke="rgba(30,160,110,0.28)" stroke-width="3" fill="none"/>
+        <path d="M 138,366 C 156,360 172,360 188,366" stroke="rgba(30,160,110,0.22)" stroke-width="2" fill="none"/>
+        <!-- Underbelly shading -->
+        <path d="M 133,382 C 148,390 165,393 180,388 C 170,398 150,400 133,392 Z" fill="#062218" opacity="0.55"/>
 
-        <!-- ══════════════════════════════════════════════ -->
-        <!-- ── BRIDE PORTRAIT MEDALLION ── -->
-        <!-- ══════════════════════════════════════════════ -->
-        <!-- Soft atmospheric halo (rose tint) -->
-        <circle cx="515" cy="285" r="96" fill="rgba(200,60,120,0.04)"/>
-        <circle cx="515" cy="285" r="86" fill="rgba(200,60,120,0.06)"/>
-        <!-- Outer decorative gold ring -->
-        <circle cx="515" cy="285" r="78" fill="none" stroke="url(#goldRing)" stroke-width="5"/>
-        <!-- Dark band inside outer ring -->
-        <circle cx="515" cy="285" r="73" fill="#0d021a"/>
-        <!-- Inner fine gold ring -->
-        <circle cx="515" cy="285" r="70" fill="none" stroke="url(#goldRing)" stroke-width="1.5"/>
-        <!-- Portrait field background -->
-        <circle cx="515" cy="285" r="68" fill="url(#portraitBgB)"/>
+        <!-- Neck (elegant S-curve, deep emerald) -->
+        <path d="M 182,352 C 194,334 195,312 189,293 C 184,276 177,260 172,245"
+              stroke="url(#peacockNeck)" stroke-width="18" fill="none" stroke-linecap="round"/>
+        <!-- Neck iridescent highlight -->
+        <path d="M 185,348 C 194,331 194,311 188,292 C 183,276 177,261 173,247"
+              stroke="rgba(60,220,150,0.18)" stroke-width="8" fill="none" stroke-linecap="round"/>
 
-        <!-- Portrait silhouette — clipped to circle -->
-        <g clip-path="url(#brideClip)">
-          <!-- ── Saree blouse / Chest (bottom of circle) ── -->
-          <path d="M 447,360 L 583,360 L 583,324 C 565,316 542,312 515,312 C 488,312 465,316 447,324 Z" fill="url(#brideSaree)"/>
-          <!-- Gold saree border -->
-          <path d="M 447,326 C 465,318 490,314 515,314 C 540,314 565,318 583,326" fill="none" stroke="#ffd700" stroke-width="2" opacity="0.6"/>
-          <!-- Saree texture overlay -->
-          <path d="M 447,324 L 583,324 L 583,360 L 447,360 Z" fill="url(#zariPattern)" opacity="0.2"/>
-          <!-- Saree pallu — draped over left shoulder toward fire -->
-          <path d="M 468,314 C 458,296 452,274 454,252" stroke="url(#brideSaree2)" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.8"/>
-          <path d="M 468,314 C 458,296 452,274 454,252" stroke="#ffd700" stroke-width="1.5" fill="none" opacity="0.55"/>
-          <!-- Saree blouse V-collar -->
-          <path d="M 498,312 C 505,305 511,302 515,300 C 519,302 525,305 532,312" fill="none" stroke="rgba(255,215,0,0.4)" stroke-width="1.5"/>
-          <!-- ── Necklace ── -->
-          <path d="M 495,310 C 504,317 526,317 535,310" stroke="#ffd700" stroke-width="2.5" fill="none"/>
-          <circle cx="515" cy="316" r="5.5" fill="#ffd700"/>
-          <circle cx="515" cy="316" r="3.5" fill="#c4607a"/>
-          <circle cx="515" cy="316" r="1.8" fill="#ffd700"/>
-          <circle cx="503" cy="313" r="3" fill="#ffd700"/>
-          <circle cx="527" cy="313" r="3" fill="#ffd700"/>
-          <!-- ── Neck ── -->
-          <path d="M 507,312 C 505,302 505,290 507,280 C 509,272 512,268 515,267 C 518,268 521,272 523,280 C 525,290 525,302 523,312 Z" fill="url(#brideSkin)"/>
-          <!-- ── Face — oval portrait ── -->
-          <ellipse cx="514" cy="258" rx="30" ry="36" fill="url(#brideSkin)" transform="rotate(4,514,258)"/>
-          <!-- Subtle cheek shading -->
-          <ellipse cx="530" cy="268" rx="8" ry="10" fill="rgba(0,0,0,0.04)"/>
-          <!-- ── Eyes ── -->
-          <!-- Left eye -->
-          <path d="M 500,256 C 503,253 507,252 510,254 C 507,258 503,259 500,256 Z" fill="#1a0808"/>
-          <path d="M 501,252 C 505,250 509,250 512,252" stroke="#1a0808" stroke-width="1.5" fill="none" opacity="0.75"/>
-          <circle cx="505" cy="255" r="1.5" fill="white" opacity="0.4"/>
-          <!-- Right eye -->
-          <path d="M 519,254 C 523,251 528,250 531,252 C 528,256 523,257 519,254 Z" fill="#1a0808"/>
-          <path d="M 520,251 C 524,248 529,248 532,250" stroke="#1a0808" stroke-width="1.5" fill="none" opacity="0.75"/>
-          <circle cx="525" cy="253" r="1.5" fill="white" opacity="0.4"/>
-          <!-- ── Nose ── -->
-          <path d="M 519,264 C 521,269 522,274 520,277 C 518,279 515,279 513,277 C 515,274 517,270 519,264 Z" fill="rgba(0,0,0,0.06)"/>
-          <path d="M 512,277 C 515,275 518,275 521,277" stroke="rgba(80,30,0,0.16)" stroke-width="1" fill="none"/>
-          <!-- ── Lips ── -->
-          <path d="M 509,281 C 512,279 517,279 521,281" stroke="#c06080" stroke-width="1.8" fill="rgba(180,60,80,0.12)" opacity="0.8"/>
-          <path d="M 510,284 C 513,286 518,286 522,284" stroke="#c06080" stroke-width="1.2" fill="none" opacity="0.6"/>
-          <!-- ── Bindi ── (auspicious forehead mark) -->
-          <circle cx="514" cy="243" r="5.5" fill="#c4607a"/>
-          <circle cx="514" cy="243" r="3.5" fill="#8a0020"/>
-          <circle cx="507" cy="244" r="1.3" fill="#ffd700" opacity="0.8"/>
-          <circle cx="521" cy="244" r="1.3" fill="#ffd700" opacity="0.8"/>
-          <!-- ── Right ear + earring ── -->
-          <path d="M 543,258 C 545,262 545,268 543,272 C 541,274 539,273 538,270 C 540,265 541,260 543,258 Z" fill="url(#brideSkin)" stroke="rgba(0,0,0,0.08)" stroke-width="0.5"/>
-          <line x1="542" y1="266" x2="542" y2="278" stroke="#ffd700" stroke-width="1.5"/>
-          <circle cx="542" cy="281" r="5.5" fill="#ffd700"/>
-          <circle cx="542" cy="281" r="3.5" fill="#c4607a"/>
-          <circle cx="542" cy="281" r="1.8" fill="#ffd700"/>
-          <!-- ── Hair ── (dark, sweeping back from face) -->
-          <path d="M 485,254 C 484,238 487,223 494,216 C 500,210 508,207 514,207 C 520,207 528,210 534,216 C 540,223 543,238 543,254 C 537,243 529,237 521,235 C 513,234 505,237 499,242 Z" fill="#100010"/>
-          <!-- Hair parting line (subtle) -->
-          <line x1="514" y1="207" x2="514" y2="230" stroke="rgba(200,150,120,0.2)" stroke-width="1.2"/>
-          <!-- ── Hair bun ── (at upper left — back of head) -->
-          <ellipse cx="492" cy="228" rx="22" ry="15" fill="#180015"/>
-          <ellipse cx="492" cy="228" rx="18" ry="11" fill="#100010"/>
-          <!-- Gajra jasmine flowers adorning the bun -->
-          <path d="M 479,222 C 487,216 497,215 504,219" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" fill="none" stroke-dasharray="2,3"/>
-          <circle cx="480" cy="222" r="4.5" fill="white" opacity="0.92"/><circle cx="480" cy="222" r="2.2" fill="#ffd700"/>
-          <circle cx="487" cy="217" r="4.5" fill="white" opacity="0.95"/><circle cx="487" cy="217" r="2.2" fill="#ffd700"/>
-          <circle cx="495" cy="215" r="5" fill="white" opacity="0.98"/><circle cx="495" cy="215" r="2.5" fill="#ffd700"/>
-          <circle cx="502" cy="218" r="4" fill="#ffb3c6" opacity="0.92"/><circle cx="502" cy="218" r="2" fill="#ffd700"/>
-          <circle cx="474" cy="228" r="3.5" fill="white" opacity="0.85"/><circle cx="474" cy="228" r="1.8" fill="#ffd700"/>
-          <!-- ── Maang Tikka ── -->
-          <line x1="514" y1="218" x2="514" y2="238" stroke="#ffd700" stroke-width="1.3"/>
-          <circle cx="514" cy="240" r="4.5" fill="#ffd700"/>
-          <circle cx="514" cy="240" r="2.8" fill="#c4607a"/>
-          <circle cx="514" cy="240" r="1.2" fill="#ffd700"/>
-          <!-- ── Bangles on right arm ── -->
-          <circle cx="578" cy="295" r="9" fill="none" stroke="#ffd700" stroke-width="2.5"/>
-          <circle cx="578" cy="286" r="9" fill="none" stroke="#e8678a" stroke-width="2"/>
-          <circle cx="578" cy="277" r="8" fill="none" stroke="rgba(255,215,0,0.55)" stroke-width="1.5"/>
-          <!-- Left ear stud (partial, just visible) -->
-          <circle cx="487" cy="262" r="3" fill="#ffd700" opacity="0.55"/>
+        <!-- Head -->
+        <circle cx="171" cy="236" r="19" fill="#176452"/>
+        <ellipse cx="164" cy="230" rx="9" ry="7" fill="rgba(50,200,130,0.22)"/>
+
+        <!-- Crown — 5 plumes with gold tips -->
+        <path d="M 171,217 C 167,204 164,194 166,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
+        <circle cx="166" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
+        <path d="M 171,217 C 175,204 178,194 177,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
+        <circle cx="177" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
+        <path d="M 171,217 C 162,206 158,197 160,191" stroke="#22be88" stroke-width="2" fill="none"/>
+        <circle cx="160" cy="189" r="4" fill="#ffd700" opacity="0.86"/>
+        <path d="M 171,217 C 183,207 187,198 185,192" stroke="#22be88" stroke-width="2" fill="none"/>
+        <circle cx="185" cy="190" r="4" fill="#ffd700" opacity="0.86"/>
+        <path d="M 171,217 C 154,210 150,203 152,197" stroke="#20b082" stroke-width="1.8" fill="none"/>
+        <circle cx="152" cy="195" r="3.2" fill="#ffd700" opacity="0.78"/>
+
+        <!-- Eye (bright amber iris, facing right) -->
+        <circle cx="181" cy="232" r="7" fill="#0a0808"/>
+        <circle cx="181" cy="232" r="4.5" fill="#226040"/>
+        <circle cx="181" cy="232" r="2.8" fill="#ffd700"/>
+        <circle cx="182" cy="231" r="1.3" fill="white" opacity="0.88"/>
+
+        <!-- Beak (facing right toward sacred fire) -->
+        <path d="M 189,231 C 202,227 210,229 208,234 C 206,238 192,238 189,234 Z" fill="#d4a820"/>
+        <path d="M 189,234 C 202,235 209,233 207,238 C 205,241 191,240 189,237 Z" fill="#a87818" opacity="0.65"/>
+
+        <!-- Feet (three-toed, on the ground) -->
+        <path d="M 146,392 L 138,416" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 138,416 L 130,422 M 138,416 L 141,423 M 138,416 L 147,420" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 160,394 L 152,418" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 152,418 L 144,424 M 152,418 L 155,425 M 152,418 L 162,421" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- ════ RIGHT PEACOCK — tail fan ════ -->
+        <g transform="translate(532,360)">
+          <use href="#pfBase" transform="rotate(45)" opacity="0.80"/>
+          <use href="#pfBase" transform="rotate(34)" opacity="0.85"/>
+          <use href="#pfBase" transform="rotate(23)" opacity="0.90"/>
+          <use href="#pfBase" transform="rotate(12)" opacity="0.94"/>
+          <use href="#pfBase" transform="rotate(1)"/>
+          <use href="#pfBase" transform="rotate(-10)"/>
+          <use href="#pfBase" transform="rotate(-21)" opacity="0.94"/>
+          <use href="#pfBase" transform="rotate(-31)" opacity="0.88"/>
+          <use href="#pfBase" transform="rotate(-40)" opacity="0.80"/>
         </g>
+        <ellipse cx="550" cy="300" rx="70" ry="80" fill="rgba(20,140,100,0.06)"/>
 
-        <!-- Frame cardinal ornaments (outside clip) -->
-        <!-- Top ornament = Jasmine flower (identifies bride) -->
-        <circle cx="515" cy="202" r="9" fill="white" opacity="0.95"/>
-        <circle cx="515" cy="202" r="5.5" fill="#ffd700"/>
-        <circle cx="515" cy="202" r="2.5" fill="white" opacity="0.8"/>
-        <circle cx="504" cy="198" r="6" fill="white" opacity="0.85"/><circle cx="504" cy="198" r="3" fill="#ffd700"/>
-        <circle cx="526" cy="198" r="6" fill="white" opacity="0.85"/><circle cx="526" cy="198" r="3" fill="#ffd700"/>
-        <circle cx="515" cy="205" r="5.5" fill="#ffd700"/><circle cx="515" cy="205" r="3.5" fill="#fffbf0"/>
-        <circle cx="515" cy="365" r="5.5" fill="#ffd700"/><circle cx="515" cy="365" r="3.5" fill="#fffbf0"/>
-        <circle cx="435" cy="285" r="5.5" fill="#ffd700"/><circle cx="435" cy="285" r="3.5" fill="#fffbf0"/>
-        <circle cx="595" cy="285" r="5.5" fill="#ffd700"/><circle cx="595" cy="285" r="3.5" fill="#fffbf0"/>
-        <!-- Frame 45° ornament dots -->
-        <circle cx="461" cy="231" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="569" cy="231" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="461" cy="339" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <circle cx="569" cy="339" r="3.5" fill="#ffd700" opacity="0.75"/>
-        <!-- Bride name label -->
-        <text x="515" y="392" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#ffd700" letter-spacing="3" opacity="0.92">SUMATHI</text>
+        <!-- ════ RIGHT PEACOCK — body, neck, head (mirrored) ════ -->
+        <ellipse cx="544" cy="366" rx="16" ry="18" fill="#082c20" opacity="0.6"/>
+        <ellipse cx="518" cy="366" rx="44" ry="29" fill="url(#peacockBody)" transform="rotate(12,518,366)" filter="url(#glowFilter)"/>
+        <path d="M 487,348 C 506,337 530,340 548,352" stroke="rgba(50,210,150,0.38)" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M 490,358 C 508,350 526,348 544,356" stroke="rgba(30,160,110,0.28)" stroke-width="3" fill="none"/>
+        <path d="M 492,366 C 508,360 524,360 542,366" stroke="rgba(30,160,110,0.22)" stroke-width="2" fill="none"/>
+        <path d="M 500,388 C 515,393 532,390 547,382 C 530,400 510,400 497,392 Z" fill="#062218" opacity="0.55"/>
 
-        <!-- ── CONNECTING THALI THREAD ── -->
-        <!-- Sacred maangalyam thread arcing from groom medallion to bride medallion -->
-        <!-- Shadow/glow under the thread -->
-        <path d="M245,285 Q282,312 312,325 Q340,318 368,325 Q398,312 435,285" stroke="rgba(255,183,0,0.15)" stroke-width="6" fill="none"/>
-        <!-- Main thread -->
-        <path d="M245,285 Q282,312 312,325 Q340,318 368,325 Q398,312 435,285" stroke="#ffd700" stroke-width="1.8" fill="none" stroke-dasharray="5,4" opacity="0.78"/>
-        <!-- Thali pendant at center -->
-        <circle cx="340" cy="320" r="9" fill="#ffd700" opacity="0.95"/>
-        <circle cx="340" cy="320" r="6.5" fill="#d4a017"/>
-        <circle cx="340" cy="320" r="3.5" fill="#ffd700"/>
-        <!-- Om symbol on thali -->
-        <text x="340" y="324" text-anchor="middle" font-family="serif" font-size="8" fill="#ffd700" opacity="0.9">ॐ</text>
+        <!-- Neck (facing left) -->
+        <path d="M 498,352 C 486,334 485,312 491,293 C 496,276 503,260 508,245"
+              stroke="url(#peacockNeck)" stroke-width="18" fill="none" stroke-linecap="round"/>
+        <path d="M 495,348 C 486,331 486,311 492,292 C 497,276 503,261 507,247"
+              stroke="rgba(60,220,150,0.18)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+        <!-- Head -->
+        <circle cx="509" cy="236" r="19" fill="#176452"/>
+        <ellipse cx="516" cy="230" rx="9" ry="7" fill="rgba(50,200,130,0.22)"/>
+
+        <!-- Crown (mirrored) -->
+        <path d="M 509,217 C 513,204 516,194 514,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
+        <circle cx="514" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
+        <path d="M 509,217 C 505,204 502,194 503,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
+        <circle cx="503" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
+        <path d="M 509,217 C 518,206 522,197 520,191" stroke="#22be88" stroke-width="2" fill="none"/>
+        <circle cx="520" cy="189" r="4" fill="#ffd700" opacity="0.86"/>
+        <path d="M 509,217 C 497,207 493,198 495,192" stroke="#22be88" stroke-width="2" fill="none"/>
+        <circle cx="495" cy="190" r="4" fill="#ffd700" opacity="0.86"/>
+        <path d="M 509,217 C 526,210 530,203 528,197" stroke="#20b082" stroke-width="1.8" fill="none"/>
+        <circle cx="528" cy="195" r="3.2" fill="#ffd700" opacity="0.78"/>
+
+        <!-- Eye (facing left) -->
+        <circle cx="499" cy="232" r="7" fill="#0a0808"/>
+        <circle cx="499" cy="232" r="4.5" fill="#226040"/>
+        <circle cx="499" cy="232" r="2.8" fill="#ffd700"/>
+        <circle cx="498" cy="231" r="1.3" fill="white" opacity="0.88"/>
+
+        <!-- Beak (facing left toward fire) -->
+        <path d="M 491,231 C 478,227 470,229 472,234 C 474,238 488,238 491,234 Z" fill="#d4a820"/>
+        <path d="M 491,234 C 478,235 471,233 473,238 C 475,241 489,240 491,237 Z" fill="#a87818" opacity="0.65"/>
+
+        <!-- Feet (mirrored) -->
+        <path d="M 534,392 L 542,416" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 542,416 L 550,422 M 542,416 L 539,423 M 542,416 L 533,420" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
+        <path d="M 520,394 L 528,418" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
+        <path d="M 528,418 L 536,424 M 528,418 L 525,425 M 528,418 L 518,421" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- ════ CROWN-TO-CROWN MARIGOLD GARLAND ════ -->
+        <!-- Arcing between peacock crowns over the sacred fire -->
+        <path d="M 171,218 C 230,172 286,160 340,158 C 394,160 450,172 509,218"
+              stroke="#3a5818" stroke-width="2.5" fill="none" opacity="0.52" stroke-dasharray="3,3"/>
+        <!-- Marigold blooms along garland -->
+        <circle cx="198" cy="197" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="198" cy="197" r="3" fill="#ffd700"/>
+        <circle cx="224" cy="183" r="6" fill="#ffd700" opacity="0.9"/><circle cx="224" cy="183" r="3" fill="#ff8c00"/>
+        <circle cx="252" cy="172" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="252" cy="172" r="3" fill="#ffd700"/>
+        <circle cx="282" cy="165" r="6.5" fill="white" opacity="0.9"/><circle cx="282" cy="165" r="3.2" fill="#ffd700"/>
+        <circle cx="311" cy="160" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="311" cy="160" r="3" fill="#ffd700"/>
+        <circle cx="340" cy="158" r="8" fill="white" opacity="0.93"/><circle cx="340" cy="158" r="4" fill="#ffd700"/>
+        <circle cx="369" cy="160" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="369" cy="160" r="3" fill="#ffd700"/>
+        <circle cx="398" cy="165" r="6.5" fill="white" opacity="0.9"/><circle cx="398" cy="165" r="3.2" fill="#ffd700"/>
+        <circle cx="428" cy="172" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="428" cy="172" r="3" fill="#ffd700"/>
+        <circle cx="456" cy="183" r="6" fill="#ffd700" opacity="0.9"/><circle cx="456" cy="183" r="3" fill="#ff8c00"/>
+        <circle cx="482" cy="197" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="482" cy="197" r="3" fill="#ffd700"/>
 
         <!-- ── DECORATIVE ELEMENTS ── -->
         <!-- Flower petals scattered (artistic) -->
@@ -723,8 +654,8 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <!-- (positioned absolutely over the fire area) -->
     </div>
 
-    <div class="couple-caption sr">Together in Sacred Fire</div>
-    <div class="couple-sub sr">Saptapadi — Seven sacred steps into forever</div>
+    <div class="couple-caption sr">Two Souls, One Sacred Flame</div>
+    <div class="couple-sub sr">Saptapadi — Seven sacred steps witnessed by the eternal fire</div>
   </div>
 </section>
 
