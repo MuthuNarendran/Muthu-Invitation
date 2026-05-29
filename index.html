@@ -226,7 +226,6 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 <!-- INTRO -->
 <div id="intro">
   <div class="intro-sparks" id="introSparks"></div>
-  <div id="waBanner">📱 Open in <strong>Chrome</strong> for the full experience! Tap ⋮ → "Open in Chrome"</div>
   <div class="kolam-wrap">
     <div class="k-ring"></div><div class="k-ring"></div><div class="k-ring"></div><div class="k-ring"></div><div class="k-ring"></div>
     <div class="flame-glow"></div>
@@ -446,189 +445,139 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
         <path d="M333,305 Q328,285 335,270 Q340,258 337,245" stroke="rgba(200,200,180,.18)" stroke-width="3" fill="none" stroke-linecap="round"/>
         <path d="M347,300 Q354,280 349,265 Q344,250 350,238" stroke="rgba(200,200,180,.15)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- ── GROOM (left side, slight 3/4 view toward fire) ── -->
-        <g filter="url(#figureShadow)" transform="translate(0,0)">
-          <!-- Dhoti/churidar lower body -->
-          <path d="M152,445 Q160,380 162,340 L210,340 Q212,380 220,445Z" fill="#1e1008"/>
-          <!-- Gold border on dhoti bottom -->
-          <path d="M152,438 L220,438" stroke="#ffd700" stroke-width="3" opacity=".75"/>
-          <path d="M152,443 L220,443" stroke="#ffd700" stroke-width="1.5" opacity=".45"/>
-          <!-- Feet/shoes -->
-          <path d="M148,445 Q160,452 175,450 Q172,442 162,440Z" fill="#1a0800"/>
-          <path d="M210,445 Q210,440 222,442 Q225,448 218,452 Q208,452 210,445Z" fill="#1a0800"/>
+        <!-- ── GROOM — Sacred Niche Silhouette ── -->
+        <!-- Decorative temple arch niche glowing behind figure -->
+        <path d="M112,445 L112,235 Q112,152 186,130 Q260,152 260,235 L260,445Z" fill="rgba(255,183,0,.05)"/>
+        <path d="M116,443 L116,236 Q116,158 186,136 Q256,158 256,236 L256,443Z" fill="none" stroke="rgba(255,183,0,.2)" stroke-width="1.5"/>
+        <path d="M122,441 L122,238 Q122,166 186,144 Q250,166 250,238 L250,441Z" fill="none" stroke="rgba(255,183,0,.1)" stroke-width="1"/>
+        <circle cx="186" cy="132" r="6" fill="rgba(255,215,0,.28)"/>
+        <circle cx="186" cy="132" r="3.5" fill="rgba(255,183,0,.52)"/>
+        <circle cx="116" cy="295" r="5" fill="none" stroke="rgba(255,183,0,.22)" stroke-width="1"/>
+        <circle cx="116" cy="295" r="2.5" fill="rgba(255,183,0,.16)"/>
+        <circle cx="256" cy="295" r="5" fill="none" stroke="rgba(255,183,0,.22)" stroke-width="1"/>
+        <circle cx="256" cy="295" r="2.5" fill="rgba(255,183,0,.16)"/>
 
-          <!-- Sherwani body -->
-          <path d="M148,200 Q140,245 138,340 L232,340 Q230,245 222,200 Q208,186 186,184 Q164,186 148,200Z" fill="#1a0810"/>
-          <!-- Zari texture on sherwani -->
-          <path d="M148,200 Q140,245 138,340 L232,340 Q230,245 222,200 Q208,186 186,184 Q164,186 148,200Z" fill="url(#zariPattern)" opacity=".3"/>
-          <!-- Center panel / button line -->
-          <line x1="186" y1="184" x2="186" y2="340" stroke="#ffd700" stroke-width="1.5" opacity=".6"/>
-          <!-- Gold buttons -->
-          <circle cx="186" cy="200" r="4" fill="#ffd700"/>
-          <circle cx="186" cy="220" r="4" fill="#ffd700"/>
-          <circle cx="186" cy="240" r="4" fill="#ffd700"/>
-          <circle cx="186" cy="260" r="4" fill="#ffd700"/>
-          <circle cx="186" cy="280" r="4" fill="#ffd700"/>
-          <!-- Sherwani hem embroidery -->
-          <path d="M138,330 Q186,342 232,330" stroke="#ffd700" stroke-width="2" fill="none"/>
-          <path d="M140,335 Q186,347 230,335" stroke="#ffd700" stroke-width="1" fill="none" opacity=".5"/>
-          <!-- Collar embroidery -->
-          <path d="M168,185 Q186,195 204,185" stroke="#ffd700" stroke-width="1.5" fill="none"/>
-
-          <!-- Angavastram stole -->
-          <path d="M152,195 Q140,240 135,310 Q132,330 136,345" stroke="rgba(255,215,0,.8)" stroke-width="10" fill="none" stroke-linecap="round"/>
-          <path d="M152,195 Q140,240 135,310 Q132,330 136,345" stroke="#ffd700" stroke-width="1.5" fill="none" stroke-linecap="round" opacity=".9"/>
-
-          <!-- Right arm (reaching toward fire) -->
-          <path d="M222,210 Q248,228 262,260 Q268,278 264,290" stroke="#1a0810" stroke-width="22" stroke-linecap="round" fill="none"/>
-          <!-- Right hand -->
-          <ellipse cx="264" cy="295" rx="14" ry="11" fill="#1a0810"/>
-          <!-- Left arm -->
-          <path d="M148,210 Q126,228 118,258 Q114,272 118,282" stroke="#1a0810" stroke-width="22" stroke-linecap="round" fill="none"/>
-          <!-- Left hand -->
-          <ellipse cx="118" cy="287" rx="14" ry="11" fill="#1a0810"/>
-
-          <!-- Neck -->
-          <rect x="175" y="172" width="22" height="18" rx="5" fill="#1a0810"/>
-
-          <!-- Head -->
-          <ellipse cx="186" cy="144" rx="38" ry="42" fill="#1a0810"/>
-          <!-- Ear -->
-          <ellipse cx="148" cy="148" rx="6" ry="9" fill="#1a0810"/>
-          <ellipse cx="224" cy="148" rx="6" ry="9" fill="#1a0810"/>
-
-
-          <!-- TURBAN (detailed) -->
-          <!-- Turban base wrap -->
-          <ellipse cx="186" cy="106" rx="46" ry="22" fill="url(#groomTurban)"/>
-          <path d="M140,108 Q145,90 186,84 Q227,90 232,108" fill="url(#groomTurban)"/>
-          <!-- Turban folds (lines) -->
-          <path d="M144,106 Q186,95 228,106" stroke="rgba(200,160,0,.55)" stroke-width="2.5" fill="none"/>
-          <path d="M147,113 Q186,102 225,113" stroke="rgba(200,160,0,.38)" stroke-width="1.5" fill="none"/>
-          <path d="M148,119 Q186,109 224,119" stroke="rgba(200,160,0,.25)" stroke-width="1" fill="none"/>
-          <!-- Turban fan/pleat -->
-          <path d="M232,108 Q250,94 244,78 Q232,83 226,97" fill="url(#groomTurban)" opacity=".88"/>
-          <path d="M232,108 Q250,94 244,78" stroke="rgba(200,160,0,.5)" stroke-width="1.5" fill="none"/>
-          <!-- Kalgi (sarpech) jewel -->
-          <circle cx="186" cy="91" r="11" fill="#ffd700"/>
-          <circle cx="186" cy="91" r="8" fill="#c4607a"/>
-          <circle cx="186" cy="91" r="5" fill="#ffd700"/>
-          <circle cx="186" cy="91" r="2.5" fill="white" opacity=".8"/>
-          <!-- Jewel rays -->
-          <path d="M186,80 L186,75" stroke="#ffd700" stroke-width="1.5"/>
-          <path d="M195,83 L199,79" stroke="#ffd700" stroke-width="1.5"/>
-          <path d="M177,83 L173,79" stroke="#ffd700" stroke-width="1.5"/>
+        <g filter="url(#figureShadow)">
+          <!-- UNIFIED body silhouette — head flows into neck into torso, no visible seam -->
+          <path d="M154,156 Q148,170 148,202 Q140,252 138,344 L232,344 Q230,252 222,202 Q222,170 216,156 Q204,132 186,130 Q168,132 154,156Z" fill="#1a0810"/>
+          <ellipse cx="186" cy="148" rx="34" ry="38" fill="#1a0810"/>
+          <!-- Churidar legs — narrow, tapering -->
+          <path d="M152,344 L150,445 L172,445 L186,352 L200,445 L222,445 L220,344Z" fill="#1e1008"/>
+          <path d="M150,432 L222,432" stroke="#ffd700" stroke-width="3" opacity=".7"/>
+          <!-- Mojari shoes -->
+          <path d="M146,445 Q158,453 175,451 L171,439 L150,440Z" fill="#100808"/>
+          <path d="M200,445 L222,439 Q226,446 218,453 Q207,453 200,445Z" fill="#100808"/>
+          <!-- Arms — filled tapered paths, not tube-strokes -->
+          <path d="M220,216 Q252,236 265,268 Q271,286 265,301 L253,296 Q258,281 253,265 Q240,235 215,221Z" fill="#1a0810"/>
+          <path d="M152,216 Q122,238 112,268 Q106,286 112,301 L124,296 Q118,281 124,265 Q138,237 160,221Z" fill="#1a0810"/>
+          <!-- Sherwani embroidery -->
+          <path d="M148,202 Q140,252 138,344 L232,344 Q230,252 222,202 Q208,180 186,178 Q164,180 148,202Z" fill="url(#zariPattern)" opacity=".28"/>
+          <line x1="186" y1="178" x2="186" y2="344" stroke="rgba(255,215,0,.5)" stroke-width="1.5"/>
+          <circle cx="186" cy="196" r="3.5" fill="#ffd700"/>
+          <circle cx="186" cy="215" r="3.5" fill="#ffd700"/>
+          <circle cx="186" cy="234" r="3.5" fill="#ffd700"/>
+          <circle cx="186" cy="253" r="3.5" fill="#ffd700"/>
+          <circle cx="186" cy="272" r="3.5" fill="#ffd700"/>
+          <path d="M138,334 Q186,346 234,334" stroke="#ffd700" stroke-width="2.5" fill="none" opacity=".65"/>
+          <!-- Gold angavastram stole -->
+          <path d="M152,200 Q138,248 134,316 Q130,338 136,354" stroke="rgba(255,215,0,.62)" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <!-- Turban -->
+          <ellipse cx="186" cy="110" rx="46" ry="22" fill="url(#groomTurban)"/>
+          <path d="M140,112 Q145,92 186,86 Q227,92 232,112" fill="url(#groomTurban)"/>
+          <path d="M144,110 Q186,99 228,110" stroke="rgba(200,160,0,.55)" stroke-width="2.5" fill="none"/>
+          <path d="M147,117 Q186,106 225,117" stroke="rgba(200,160,0,.35)" stroke-width="1.5" fill="none"/>
+          <path d="M232,112 Q250,97 244,80 Q232,85 226,100" fill="url(#groomTurban)" opacity=".85"/>
+          <!-- Kalgi jewel -->
+          <circle cx="186" cy="93" r="10" fill="#ffd700"/>
+          <circle cx="186" cy="93" r="7" fill="#c4607a"/>
+          <circle cx="186" cy="93" r="4" fill="#ffd700"/>
+          <circle cx="186" cy="93" r="2" fill="white" opacity=".8"/>
+          <path d="M186,83 L186,77" stroke="#ffd700" stroke-width="1.5"/>
+          <path d="M194,86 L198,82" stroke="#ffd700" stroke-width="1.5"/>
+          <path d="M178,86 L174,82" stroke="#ffd700" stroke-width="1.5"/>
         </g>
 
-        <!-- ── BRIDE (right side, facing fire/left) ── -->
-        <g filter="url(#figureShadow)" transform="translate(0,0)">
-          <!-- Saree skirt -->
-          <path d="M458,445 Q452,380 448,340 L530,340 Q526,380 520,445Z" fill="#2a0d14"/>
-          <!-- Saree pleats (elegant fold lines) -->
-          <path d="M465,340 L462,445" stroke="rgba(255,215,0,.22)" stroke-width="2"/>
-          <path d="M474,340 L472,445" stroke="rgba(255,215,0,.16)" stroke-width="1.5"/>
-          <path d="M498,340 L500,445" stroke="rgba(255,215,0,.16)" stroke-width="1.5"/>
-          <path d="M510,340 L514,445" stroke="rgba(255,215,0,.22)" stroke-width="2"/>
-          <!-- Gold border bottom -->
-          <path d="M458,432 L520,432" stroke="#ffd700" stroke-width="5" opacity=".85"/>
-          <path d="M458,440 L520,440" stroke="#ffd700" stroke-width="2" opacity=".45"/>
-          <!-- Feet/payal -->
-          <path d="M456,445 Q460,440 474,441 Q472,450 462,452Z" fill="#1a0800"/>
-          <path d="M520,445 Q520,450 510,452 Q502,450 506,441 Q518,440 520,445Z" fill="#1a0800"/>
-          <!-- Payal detail -->
-          <path d="M462,449 Q468,445 474,449" stroke="#ffd700" stroke-width="1" fill="none"/>
-          <path d="M506,449 Q512,445 518,449" stroke="#ffd700" stroke-width="1" fill="none"/>
+        <!-- ── BRIDE — Sacred Niche Silhouette ── -->
+        <!-- Decorative temple arch niche glowing behind figure -->
+        <path d="M420,445 L420,235 Q420,152 489,130 Q558,152 558,235 L558,445Z" fill="rgba(255,183,0,.05)"/>
+        <path d="M424,443 L424,236 Q424,158 489,136 Q554,158 554,236 L554,443Z" fill="none" stroke="rgba(255,183,0,.2)" stroke-width="1.5"/>
+        <path d="M430,441 L430,238 Q430,166 489,144 Q548,166 548,238 L548,441Z" fill="none" stroke="rgba(255,183,0,.1)" stroke-width="1"/>
+        <circle cx="489" cy="132" r="6" fill="rgba(255,215,0,.28)"/>
+        <circle cx="489" cy="132" r="3.5" fill="rgba(255,183,0,.52)"/>
+        <circle cx="424" cy="295" r="5" fill="none" stroke="rgba(255,183,0,.22)" stroke-width="1"/>
+        <circle cx="424" cy="295" r="2.5" fill="rgba(255,183,0,.16)"/>
+        <circle cx="554" cy="295" r="5" fill="none" stroke="rgba(255,183,0,.22)" stroke-width="1"/>
+        <circle cx="554" cy="295" r="2.5" fill="rgba(255,183,0,.16)"/>
 
-          <!-- Saree blouse -->
-          <path d="M458,200 Q450,244 448,340 L530,340 Q528,244 520,200 Q508,186 489,184 Q470,186 458,200Z" fill="#1e0810" opacity=".85"/>
-          <!-- Saree pallu draped over shoulder & cascading down left -->
-          <path d="M520,190 Q545,168 556,135 Q560,112 550,98" stroke="#2a0d14" stroke-width="25" fill="none" stroke-linecap="round" opacity=".9"/>
-          <path d="M556,135 Q568,158 562,190" stroke="#1e0810" stroke-width="18" fill="none" stroke-linecap="round" opacity=".6"/>
-          <!-- Pallu gold border -->
-          <path d="M520,190 Q545,168 556,135" stroke="#ffd700" stroke-width="2.5" fill="none" opacity=".7"/>
-          <!-- Pallu drape at bottom -->
-          <path d="M448,270 Q440,310 438,345" stroke="#2a0d14" stroke-width="16" fill="none" stroke-linecap="round" opacity=".6"/>
-
-          <!-- Arms -->
-          <!-- Left arm (reaching toward fire) -->
-          <path d="M458,210 Q432,228 420,258 Q415,272 418,284" stroke="#1e0810" stroke-width="20" stroke-linecap="round" fill="none"/>
-          <!-- Right arm -->
-          <path d="M520,210 Q544,228 552,258 Q556,270 552,280" stroke="#1e0810" stroke-width="20" stroke-linecap="round" fill="none"/>
-
-          <!-- Bangles left wrist (multiple stacked) -->
-          <circle cx="420" cy="278" r="12" fill="none" stroke="#ffd700" stroke-width="2.8"/>
-          <circle cx="420" cy="270" r="12" fill="none" stroke="#e8678a" stroke-width="2.2"/>
-          <circle cx="420" cy="262" r="11" fill="none" stroke="#ffd700" stroke-width="1.8" opacity=".7"/>
-          <!-- Bangles right wrist -->
-          <circle cx="552" cy="273" r="12" fill="none" stroke="#ffd700" stroke-width="2.8"/>
-          <circle cx="552" cy="265" r="12" fill="none" stroke="#e8678a" stroke-width="2.2"/>
-          <circle cx="552" cy="257" r="11" fill="none" stroke="#ffd700" stroke-width="1.8" opacity=".7"/>
-
-          <!-- Left hand with mehndi -->
-          <ellipse cx="418" cy="290" rx="14" ry="10" fill="#1a0810"/>
-          <path d="M412,288 Q418,282 424,288" stroke="#8b4000" stroke-width="1.2" fill="none"/>
-          <!-- Right hand -->
-          <ellipse cx="554" cy="285" rx="14" ry="10" fill="#1a0810"/>
-
-          <!-- Neck -->
-          <rect x="477" y="172" width="24" height="18" rx="6" fill="#1a0810"/>
-
-          <!-- Elaborate necklace -->
-          <path d="M462,188 Q489,204 516,188" stroke="#ffd700" stroke-width="4" fill="none"/>
-          <circle cx="489" cy="202" r="7" fill="#ffd700"/>
-          <circle cx="489" cy="202" r="4.5" fill="#c4607a"/>
-          <circle cx="489" cy="202" r="2.5" fill="#ffd700"/>
-          <circle cx="472" cy="194" r="4" fill="#ffd700"/><circle cx="472" cy="194" r="2" fill="#e8678a"/>
-          <circle cx="506" cy="194" r="4" fill="#ffd700"/><circle cx="506" cy="194" r="2" fill="#e8678a"/>
-          <circle cx="480" cy="199" r="3" fill="#ffd700"/>
-          <circle cx="498" cy="199" r="3" fill="#ffd700"/>
-
-          <!-- Head -->
-          <ellipse cx="489" cy="138" rx="36" ry="40" fill="#1a0810"/>
-          <!-- Ear -->
-          <ellipse cx="453" cy="142" rx="6" ry="9" fill="#1a0810"/>
-          <ellipse cx="525" cy="142" rx="6" ry="9" fill="#1a0810"/>
-
-          <!-- Elaborate ear-rings -->
-          <path d="M453,143 L447,155 L450,166" stroke="#ffd700" stroke-width="2.2" fill="none"/>
-          <circle cx="450" cy="169" r="5" fill="#ffd700"/>
-          <circle cx="450" cy="169" r="3" fill="#c4607a"/>
-          <path d="M525,143 L531,155 L528,166" stroke="#ffd700" stroke-width="2.2" fill="none"/>
-          <circle cx="528" cy="169" r="5" fill="#ffd700"/>
-          <circle cx="528" cy="169" r="3" fill="#c4607a"/>
-
-          <!-- Hair (beautiful flowing style) -->
-          <!-- Back hair (dark, large shape) -->
-          <path d="M453,136 Q455,105 489,98 Q523,105 525,136 Q522,116 489,110 Q456,116 453,136Z" fill="#1a0005"/>
-          <path d="M453,136 Q448,152 452,168 Q458,148 456,138Z" fill="#1a0005"/>
-          <!-- Beautiful hair bun -->
-          <ellipse cx="489" cy="97" rx="22" ry="12" fill="#280012"/>
-          <path d="M467,99 Q489,91 511,99" stroke="rgba(255,183,0,.25)" stroke-width="1" fill="none"/>
-          <!-- Gajra (jasmine flower strings) in hair -->
-          <path d="M467,95 Q489,87 511,95" stroke="rgba(255,255,255,.5)" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
-          <!-- Individual flowers in gajra -->
-          <circle cx="472" cy="93" r="4.5" fill="white" opacity=".92"/><circle cx="472" cy="93" r="2.2" fill="#ffd700"/>
-          <circle cx="483" cy="89" r="4.5" fill="white" opacity=".92"/><circle cx="483" cy="89" r="2.2" fill="#ffd700"/>
-          <circle cx="489" cy="87" r="5" fill="white" opacity=".95"/><circle cx="489" cy="87" r="2.5" fill="#ffd700"/>
-          <circle cx="495" cy="89" r="4.5" fill="white" opacity=".92"/><circle cx="495" cy="89" r="2.2" fill="#ffd700"/>
-          <circle cx="506" cy="93" r="4.5" fill="white" opacity=".92"/><circle cx="506" cy="93" r="2.2" fill="#ffd700"/>
-          <!-- Extra flowers at sides -->
-          <circle cx="462" cy="99" r="3.5" fill="#ffb3c6" opacity=".85"/><circle cx="462" cy="99" r="1.8" fill="#ffd700"/>
-          <circle cx="516" cy="99" r="3.5" fill="#ffb3c6" opacity=".85"/><circle cx="516" cy="99" r="1.8" fill="#ffd700"/>
-
-          <!-- Maang tikka chain -->
-          <line x1="489" y1="98" x2="489" y2="120" stroke="#ffd700" stroke-width="1.5"/>
-          <circle cx="489" cy="122" r="4.5" fill="#ffd700"/>
+        <g filter="url(#figureShadow)">
+          <!-- UNIFIED body silhouette — seamless head-to-body flow -->
+          <path d="M462,156 Q456,170 456,202 Q448,252 446,344 L532,344 Q530,252 522,202 Q522,170 516,156 Q504,132 489,130 Q474,132 462,156Z" fill="#1a0810"/>
+          <ellipse cx="489" cy="148" rx="34" ry="38" fill="#1a0810"/>
+          <!-- Saree skirt — flowing wider silhouette -->
+          <path d="M446,344 Q440,382 438,445 L460,445 L489,356 L518,445 L540,445 Q538,382 532,344Z" fill="#2a0d14"/>
+          <!-- Saree pleats -->
+          <path d="M455,344 L451,445" stroke="rgba(255,215,0,.14)" stroke-width="1.5"/>
+          <path d="M466,344 L463,445" stroke="rgba(255,215,0,.09)" stroke-width="1"/>
+          <path d="M512,344 L515,445" stroke="rgba(255,215,0,.09)" stroke-width="1"/>
+          <path d="M524,344 L528,445" stroke="rgba(255,215,0,.14)" stroke-width="1.5"/>
+          <!-- Gold saree border -->
+          <path d="M438,432 L540,432" stroke="#ffd700" stroke-width="4" opacity=".8"/>
+          <!-- Feet with payal -->
+          <path d="M436,445 Q450,453 462,451 L458,440 L438,441Z" fill="#100808"/>
+          <path d="M516,445 L540,440 Q542,447 534,453 Q522,453 516,445Z" fill="#100808"/>
+          <path d="M444,450 Q452,445 460,450" stroke="#ffd700" stroke-width="1.2" fill="none"/>
+          <path d="M526,450 Q534,445 542,450" stroke="#ffd700" stroke-width="1.2" fill="none"/>
+          <!-- Arms — filled tapered, natural width -->
+          <path d="M454,216 Q424,238 414,268 Q408,286 414,301 L425,296 Q420,281 426,265 Q438,237 464,221Z" fill="#1a0810"/>
+          <path d="M524,216 Q552,236 562,268 Q568,286 562,301 L551,296 Q556,281 550,265 Q540,237 514,221Z" fill="#1a0810"/>
+          <!-- Saree pallu (flowing off right shoulder) -->
+          <path d="M526,202 Q550,176 560,142 Q564,119 554,104" stroke="#2a0d14" stroke-width="24" fill="none" stroke-linecap="round" opacity=".85"/>
+          <path d="M526,202 Q550,176 560,142" stroke="#ffd700" stroke-width="2.5" fill="none" opacity=".65"/>
+          <!-- Blouse zari texture -->
+          <path d="M456,202 Q448,252 446,344 L532,344 Q530,252 524,202 Q510,180 489,178 Q468,180 456,202Z" fill="url(#zariPattern)" opacity=".22"/>
+          <!-- Bangles -->
+          <circle cx="416" cy="282" r="11" fill="none" stroke="#ffd700" stroke-width="2.8"/>
+          <circle cx="416" cy="274" r="11" fill="none" stroke="#e8678a" stroke-width="2.2"/>
+          <circle cx="416" cy="266" r="10" fill="none" stroke="rgba(255,215,0,.6)" stroke-width="1.8"/>
+          <circle cx="560" cy="278" r="11" fill="none" stroke="#ffd700" stroke-width="2.8"/>
+          <circle cx="560" cy="270" r="11" fill="none" stroke="#e8678a" stroke-width="2.2"/>
+          <circle cx="560" cy="262" r="10" fill="none" stroke="rgba(255,215,0,.6)" stroke-width="1.8"/>
+          <!-- Necklace -->
+          <path d="M464,188 Q489,204 514,188" stroke="#ffd700" stroke-width="3.5" fill="none"/>
+          <circle cx="489" cy="202" r="6" fill="#ffd700"/>
+          <circle cx="489" cy="202" r="4" fill="#c4607a"/>
+          <circle cx="489" cy="202" r="2" fill="#ffd700"/>
+          <circle cx="475" cy="194" r="3.5" fill="#ffd700"/>
+          <circle cx="503" cy="194" r="3.5" fill="#ffd700"/>
+          <!-- Earrings -->
+          <path d="M455,148 L450,162 L453,172" stroke="#ffd700" stroke-width="2" fill="none"/>
+          <circle cx="453" cy="175" r="5" fill="#ffd700"/>
+          <circle cx="453" cy="175" r="3" fill="#c4607a"/>
+          <path d="M523,148 L528,162 L525,172" stroke="#ffd700" stroke-width="2" fill="none"/>
+          <circle cx="525" cy="175" r="5" fill="#ffd700"/>
+          <circle cx="525" cy="175" r="3" fill="#c4607a"/>
+          <!-- Hair dark flowing -->
+          <path d="M455,138 Q457,105 489,97 Q521,105 523,138 Q519,112 489,105 Q459,112 455,138Z" fill="#100010"/>
+          <!-- Hair bun -->
+          <ellipse cx="489" cy="95" rx="21" ry="13" fill="#180010"/>
+          <!-- Gajra jasmine flowers -->
+          <path d="M468,92 Q489,84 510,92" stroke="rgba(255,255,255,.4)" stroke-width="2" fill="none" stroke-dasharray="3,3"/>
+          <circle cx="472" cy="90" r="4.5" fill="white" opacity=".92"/><circle cx="472" cy="90" r="2.2" fill="#ffd700"/>
+          <circle cx="482" cy="86" r="4.5" fill="white" opacity=".92"/><circle cx="482" cy="86" r="2.2" fill="#ffd700"/>
+          <circle cx="489" cy="83" r="5" fill="white" opacity=".95"/><circle cx="489" cy="83" r="2.5" fill="#ffd700"/>
+          <circle cx="496" cy="86" r="4.5" fill="white" opacity=".92"/><circle cx="496" cy="86" r="2.2" fill="#ffd700"/>
+          <circle cx="506" cy="90" r="4.5" fill="white" opacity=".92"/><circle cx="506" cy="90" r="2.2" fill="#ffd700"/>
+          <circle cx="463" cy="97" r="3.5" fill="#ffb3c6" opacity=".85"/><circle cx="463" cy="97" r="1.8" fill="#ffd700"/>
+          <circle cx="515" cy="97" r="3.5" fill="#ffb3c6" opacity=".85"/><circle cx="515" cy="97" r="1.8" fill="#ffd700"/>
+          <!-- Maang tikka -->
+          <line x1="489" y1="97" x2="489" y2="120" stroke="#ffd700" stroke-width="1.5"/>
+          <circle cx="489" cy="122" r="4" fill="#ffd700"/>
           <circle cx="489" cy="122" r="2.5" fill="#c4607a"/>
-
-          <!-- Bindi (elaborate) -->
-          <circle cx="489" cy="126" r="5.5" fill="#c4607a"/>
+          <!-- Bindi -->
+          <circle cx="489" cy="126" r="5" fill="#c4607a"/>
           <circle cx="489" cy="126" r="3" fill="#8a0020"/>
-          <!-- Small decorative dots around bindi -->
-          <circle cx="482" cy="127" r="1.2" fill="#ffd700"/>
-          <circle cx="496" cy="127" r="1.2" fill="#ffd700"/>
-          <circle cx="489" cy="120" r="1.2" fill="#ffd700"/>
-
+          <circle cx="483" cy="127" r="1.2" fill="#ffd700"/>
+          <circle cx="495" cy="127" r="1.2" fill="#ffd700"/>
         </g>
 
         <!-- ── CONNECTING THALI THREAD ── -->
@@ -769,14 +718,6 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 </div>
 
 <!-- MODALS -->
-<div class="modal" id="chromeModal">
-  <div class="modal-box">
-    <div style="font-size:56px;margin-bottom:12px">📱</div>
-    <h3 style="color:var(--maroon);font-size:44px;margin-bottom:12px">Open in Chrome</h3>
-    <p>For the full animated experience, open in the <strong style="color:var(--maroon)">Google Chrome app</strong>.<br><br>Tap ⋮ menu → "Open in Chrome"</p>
-    <button class="modal-close" onclick="document.getElementById('chromeModal').classList.remove('on')">Got it!</button>
-  </div>
-</div>
 <div class="modal" id="actionModal">
   <div class="modal-box">
     <div style="font-size:52px;margin-bottom:10px" id="mIcon">🙏</div>
@@ -791,19 +732,8 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 var G_INTRO, G_MAIN;
 var prevSec = -1;
 
-/* ── BROWSER DETECTION ── */
-(function(){
-  var ua = navigator.userAgent.toLowerCase();
-  var isInApp = /instagram|facebook|whatsapp|telegram|snapchat|tiktok|twitter/.test(ua);
-  var isSafari = /safari/.test(ua) && !/chrome/.test(ua);
-  var isGood = (/chrome/.test(ua) && !/edg|opr|whale/.test(ua)) || /firefox|edg/.test(ua);
-  if(isInApp || isSafari){
-    var b = document.getElementById('waBanner'); if(b) b.style.display='block';
-    setTimeout(function(){ document.getElementById('chromeModal').classList.add('on'); }, 2000);
-  } else if(isGood){
-    setTimeout(openInvite, 3800);
-  }
-})();
+/* ── AUTO-OPEN ── */
+(function(){ setTimeout(openInvite, 3800); })();
 
 /* ── BUTTON ── */
 document.addEventListener('DOMContentLoaded', function(){
