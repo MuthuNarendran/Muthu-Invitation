@@ -307,12 +307,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
       <div class="petal-float" style="left:75%;top:0;animation-duration:9s;animation-delay:2s;--pdx:25px">🌺</div>
       <div class="petal-float" style="left:88%;top:0;animation-duration:6.5s;animation-delay:3s;--pdx:-15px">🌸</div>
 
-      <!-- Scene CSS flames -->
-      <div class="scene-flames" id="sceneFlames">
-        <div class="sf sf1"></div><div class="sf sf2"></div><div class="sf sf3"></div>
-      </div>
-
-      <!-- ===== ARTISTIC COUPLE SVG: Saptapadi (Sacred Fire Ceremony) ===== -->
+      <!-- ===== SACRED FIRE CEREMONY — Saptapadi ===== -->
       <svg class="ceremony-scene" viewBox="0 0 680 500" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <!-- Mandap/altar gradient (gold → dark brown) -->
@@ -353,21 +348,49 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
           <pattern id="zariPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
             <path d="M0,4 L4,0 L8,4 L4,8 Z" fill="none" stroke="rgba(255,215,0,0.15)" stroke-width=".5"/>
           </pattern>
+          <!-- Night-mandap atmosphere — deep indigo darkness with warm centre -->
+          <radialGradient id="sceneBg" cx="50%" cy="55%" r="65%">
+            <stop offset="0%"   stop-color="#2a1540"/>
+            <stop offset="45%"  stop-color="#130c28"/>
+            <stop offset="100%" stop-color="#07061a"/>
+          </radialGradient>
+          <!-- Lamp halo spread (large, at each lamp position) -->
+          <radialGradient id="leftLampHalo" cx="27%" cy="52%" r="30%">
+            <stop offset="0%"  stop-color="#c06000" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#c06000" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="rightLampHalo" cx="73%" cy="52%" r="30%">
+            <stop offset="0%"  stop-color="#c06000" stop-opacity="0.28"/>
+            <stop offset="100%" stop-color="#c06000" stop-opacity="0"/>
+          </radialGradient>
+          <!-- Central fire glow spread -->
+          <radialGradient id="fireHalo" cx="50%" cy="68%" r="22%">
+            <stop offset="0%"  stop-color="#ff6800" stop-opacity="0.35"/>
+            <stop offset="100%" stop-color="#ff6800" stop-opacity="0"/>
+          </radialGradient>
         </defs>
 
+        <!-- ── ATMOSPHERIC DARK BACKGROUND ── -->
+        <rect width="680" height="500" fill="url(#sceneBg)"/>
+        <!-- Soft amber lamp halos painted into the background -->
+        <rect width="680" height="500" fill="url(#leftLampHalo)"/>
+        <rect width="680" height="500" fill="url(#rightLampHalo)"/>
+        <rect width="680" height="500" fill="url(#fireHalo)"/>
+
         <!-- ── FLOOR / MAT ── -->
-        <ellipse cx="340" cy="470" rx="300" ry="30" fill="rgba(180,140,60,0.15)"/>
-        <!-- Decorated mat/platform -->
-        <path d="M100,440 Q340,460 580,440 L580,470 Q340,490 100,470 Z" fill="url(#floorGrad)" opacity=".5"/>
-        <!-- Kolam/rangoli on floor -->
-        <ellipse cx="340" cy="458" rx="180" ry="12" fill="none" stroke="rgba(255,183,0,.25)" stroke-width="1.5" stroke-dasharray="4,6"/>
-        <ellipse cx="340" cy="458" rx="140" ry="9" fill="none" stroke="rgba(255,183,0,.2)" stroke-width="1"/>
+        <ellipse cx="340" cy="470" rx="300" ry="30" fill="rgba(180,140,60,0.12)"/>
+        <!-- Decorated mat/platform — warm gold tone on dark -->
+        <path d="M100,440 Q340,460 580,440 L580,470 Q340,490 100,470 Z" fill="#2a1e06" opacity=".75"/>
+        <path d="M100,440 Q340,460 580,440 L580,470 Q340,490 100,470 Z" fill="none" stroke="rgba(255,183,0,.30)" stroke-width="1"/>
+        <!-- Kolam/rangoli on floor — brighter against dark bg -->
+        <ellipse cx="340" cy="458" rx="180" ry="12" fill="none" stroke="rgba(255,183,0,.50)" stroke-width="1.5" stroke-dasharray="4,6"/>
+        <ellipse cx="340" cy="458" rx="140" ry="9" fill="none" stroke="rgba(255,183,0,.38)" stroke-width="1"/>
         <!-- Flower dots on rangoli -->
-        <circle cx="200" cy="456" r="3" fill="rgba(255,100,120,.5)"/>
-        <circle cx="240" cy="460" r="2.5" fill="rgba(255,215,0,.6)"/>
-        <circle cx="340" cy="462" r="4" fill="rgba(255,100,120,.5)"/>
-        <circle cx="440" cy="460" r="2.5" fill="rgba(255,215,0,.6)"/>
-        <circle cx="480" cy="456" r="3" fill="rgba(255,100,120,.5)"/>
+        <circle cx="200" cy="456" r="3" fill="rgba(255,100,120,.75)"/>
+        <circle cx="240" cy="460" r="2.5" fill="rgba(255,215,0,.85)"/>
+        <circle cx="340" cy="462" r="4" fill="rgba(255,100,120,.75)"/>
+        <circle cx="440" cy="460" r="2.5" fill="rgba(255,215,0,.85)"/>
+        <circle cx="480" cy="456" r="3" fill="rgba(255,100,120,.75)"/>
 
         <!-- ── MANDAP PILLARS ── -->
         <!-- Left pillar -->
@@ -585,7 +608,7 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
 
         <!-- ════ MARIGOLD TORANA — sacred arch spanning the two lamps ════ -->
         <path d="M 185,248 C 247,196 298,180 340,177 C 382,180 433,196 495,248"
-              stroke="rgba(40,105,22,0.52)" stroke-width="2.4" fill="none" stroke-dasharray="4,3"/>
+              stroke="rgba(60,150,30,0.75)" stroke-width="2.8" fill="none" stroke-dasharray="4,3"/>
         <circle cx="210" cy="227" r="5"   fill="#ff8fab" opacity="0.84"/><circle cx="210" cy="227" r="2.5" fill="#ffd700"/>
         <circle cx="247" cy="208" r="5"   fill="#ffd700" opacity="0.87"/><circle cx="247" cy="208" r="2.5" fill="#ff8c00"/>
         <circle cx="286" cy="193" r="5.5" fill="white"   opacity="0.90"/><circle cx="286" cy="193" r="2.8" fill="#ffd700"/>
