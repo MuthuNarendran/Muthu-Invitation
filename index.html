@@ -362,31 +362,11 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
           <pattern id="zariPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
             <path d="M0,4 L4,0 L8,4 L4,8 Z" fill="none" stroke="rgba(255,215,0,0.15)" stroke-width=".5"/>
           </pattern>
-          <!-- ── Peacock gradients ── -->
-          <linearGradient id="peacockBody" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#1e8070"/><stop offset="50%" stop-color="#0d5848"/><stop offset="100%" stop-color="#083830"/>
-          </linearGradient>
-          <linearGradient id="peacockNeck" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#28a878"/><stop offset="100%" stop-color="#0d6048"/>
-          </linearGradient>
-          <linearGradient id="featherVane" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#7a5820" stop-opacity="0.45"/>
-            <stop offset="30%" stop-color="#2a9870" stop-opacity="0.68"/>
-            <stop offset="70%" stop-color="#1a7868" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="#0d4838" stop-opacity="0.42"/>
-          </linearGradient>
-          <!-- ── Peacock tail feather template (points upward, 200 px) ── -->
-          <g id="pfBase">
-            <path d="M 0,0 C -4,-30 -16,-70 -14,-110 C -10,-150 -4,-175 0,-200 C 4,-175 10,-150 14,-110 C 16,-70 4,-30 0,0 Z" fill="url(#featherVane)"/>
-            <line x1="0" y1="0" x2="0" y2="-200" stroke="#9a7a28" stroke-width="1.6" opacity="0.62"/>
-            <ellipse cx="0" cy="-186" rx="15" ry="11" fill="#081640"/>
-            <ellipse cx="0" cy="-186" rx="11" ry="8" fill="#1848a8"/>
-            <ellipse cx="0" cy="-186" rx="7.5" ry="5.5" fill="#18c8a0"/>
-            <circle cx="0" cy="-186" r="3.5" fill="#060a20"/>
-            <circle cx="0" cy="-186" r="1.8" fill="#ffd700"/>
-            <ellipse cx="0" cy="-186" rx="17" ry="13" fill="none" stroke="rgba(255,215,0,0.42)" stroke-width="1.2"/>
-            <path d="M -2,-197 C -4,-207 -2,-213 0,-215 C 2,-213 4,-207 2,-197" fill="#28b890" opacity="0.72"/>
-          </g>
+          <!-- ── Lotus petal glow filter ── -->
+          <radialGradient id="lotusGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f09ab0" stop-opacity="0.18"/>
+            <stop offset="100%" stop-color="#f09ab0" stop-opacity="0"/>
+          </radialGradient>
         </defs>
 
         <!-- ── FLOOR / MAT ── -->
@@ -470,153 +450,118 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
         <path d="M333,305 Q328,285 335,270 Q340,258 337,245" stroke="rgba(200,200,180,.18)" stroke-width="3" fill="none" stroke-linecap="round"/>
         <path d="M347,300 Q354,280 349,265 Q344,250 350,238" stroke="rgba(200,200,180,.15)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
 
-        <!-- ════════════════════════════════════════════════════════════════ -->
-        <!-- ── LEFT PEACOCK — sacred guardian of the fire (facing right) ── -->
-        <!-- ════════════════════════════════════════════════════════════════ -->
-        <!-- ════ LEFT PEACOCK — tail fan (drawn first, behind body) ════ -->
-        <!-- 9 feathers fanning from -45° to +42° around tail origin -->
-        <g transform="translate(148,360)">
-          <use href="#pfBase" transform="rotate(-45)" opacity="0.80"/>
-          <use href="#pfBase" transform="rotate(-34)" opacity="0.85"/>
-          <use href="#pfBase" transform="rotate(-23)" opacity="0.90"/>
-          <use href="#pfBase" transform="rotate(-12)" opacity="0.94"/>
-          <use href="#pfBase" transform="rotate(-1)"/>
-          <use href="#pfBase" transform="rotate(10)"/>
-          <use href="#pfBase" transform="rotate(21)" opacity="0.94"/>
-          <use href="#pfBase" transform="rotate(31)" opacity="0.88"/>
-          <use href="#pfBase" transform="rotate(40)" opacity="0.80"/>
+        <!-- ════ LEFT LOTUS — Sacred Bloom of the Mandap ════ -->
+        <g transform="translate(192,278)">
+          <!-- Ambient petal glow -->
+          <ellipse cx="0" cy="-18" rx="62" ry="65" fill="url(#lotusGlow)"/>
+          <!-- Outer petals (8 — irregular angles + varied radii for organic feel) -->
+          <ellipse cx="0" cy="-40" rx="12" ry="37" fill="#c04868" opacity="0.55" transform="rotate(-2)"/>
+          <ellipse cx="0" cy="-38" rx="14" ry="35" fill="#d45070" opacity="0.52" transform="rotate(43)"/>
+          <ellipse cx="0" cy="-42" rx="11" ry="39" fill="#c04868" opacity="0.57" transform="rotate(87)"/>
+          <ellipse cx="0" cy="-39" rx="13" ry="36" fill="#d45070" opacity="0.53" transform="rotate(132)"/>
+          <ellipse cx="0" cy="-41" rx="12" ry="38" fill="#c04868" opacity="0.55" transform="rotate(178)"/>
+          <ellipse cx="0" cy="-37" rx="14" ry="37" fill="#d45070" opacity="0.51" transform="rotate(221)"/>
+          <ellipse cx="0" cy="-43" rx="11" ry="35" fill="#c04868" opacity="0.56" transform="rotate(265)"/>
+          <ellipse cx="0" cy="-38" rx="13" ry="40" fill="#d45070" opacity="0.54" transform="rotate(309)"/>
+          <!-- Mid petals (8 — soft rose, offset from outer layer) -->
+          <ellipse cx="0" cy="-30" rx="11" ry="28" fill="#f09ab0" opacity="0.70" transform="rotate(22)"/>
+          <ellipse cx="0" cy="-28" rx="12" ry="26" fill="#f5a8bc" opacity="0.73" transform="rotate(65)"/>
+          <ellipse cx="0" cy="-31" rx="10" ry="29" fill="#f09ab0" opacity="0.68" transform="rotate(108)"/>
+          <ellipse cx="0" cy="-29" rx="11" ry="27" fill="#f5a8bc" opacity="0.71" transform="rotate(153)"/>
+          <ellipse cx="0" cy="-30" rx="12" ry="28" fill="#f09ab0" opacity="0.70" transform="rotate(198)"/>
+          <ellipse cx="0" cy="-27" rx="10" ry="27" fill="#f5a8bc" opacity="0.74" transform="rotate(241)"/>
+          <ellipse cx="0" cy="-32" rx="11" ry="26" fill="#f09ab0" opacity="0.69" transform="rotate(287)"/>
+          <ellipse cx="0" cy="-28" rx="12" ry="30" fill="#f5a8bc" opacity="0.72" transform="rotate(330)"/>
+          <!-- Inner petals (6 — pale blush) -->
+          <ellipse cx="0" cy="-19" rx="8"  ry="18" fill="#fcc8d8" opacity="0.82" transform="rotate(0)"/>
+          <ellipse cx="0" cy="-18" rx="9"  ry="17" fill="#ffdae6" opacity="0.85" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-20" rx="8"  ry="19" fill="#fcc8d8" opacity="0.80" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-18" rx="7"  ry="17" fill="#ffdae6" opacity="0.83" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-19" rx="9"  ry="18" fill="#fcc8d8" opacity="0.82" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-20" rx="8"  ry="19" fill="#ffdae6" opacity="0.84" transform="rotate(300)"/>
+          <!-- Centre petals (5 — cream-gold, tightest ring) -->
+          <ellipse cx="0" cy="-11" rx="6"  ry="12" fill="#ffe8b0" opacity="0.90" transform="rotate(0)"/>
+          <ellipse cx="0" cy="-11" rx="7"  ry="11" fill="#fff0c8" opacity="0.88" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-12" rx="6"  ry="13" fill="#ffe8b0" opacity="0.86" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-10" rx="5"  ry="11" fill="#fff0c8" opacity="0.89" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-11" rx="7"  ry="12" fill="#ffe8b0" opacity="0.87" transform="rotate(288)"/>
+          <!-- Gold centre receptacle -->
+          <circle cx="0" cy="0" r="13" fill="#b86008" opacity="0.90"/>
+          <circle cx="0" cy="0" r="9"  fill="#ffd700" opacity="0.95"/>
+          <circle cx="0" cy="0" r="5"  fill="#ffe880"/>
+          <circle cx="0" cy="0" r="2"  fill="#c8780a"/>
+          <!-- Stamen ring -->
+          <circle cx="0"    cy="-11"  r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="7.8"  cy="-7.8" r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="11"   cy="0"    r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="7.8"  cy="7.8"  r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="0"    cy="11"   r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="-7.8" cy="7.8"  r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="-11"  cy="0"    r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="-7.8" cy="-7.8" r="1.5" fill="#ffd700" opacity="0.86"/>
         </g>
-        <!-- Iridescent glow behind the tail -->
-        <ellipse cx="130" cy="300" rx="70" ry="80" fill="rgba(20,140,100,0.06)"/>
 
-        <!-- ════ LEFT PEACOCK — body, neck, head ════ -->
-        <!-- Tail-base connection patch -->
-        <ellipse cx="136" cy="366" rx="16" ry="18" fill="#082c20" opacity="0.6"/>
-        <!-- Body (deep teal, slightly rotated toward right/fire) -->
-        <ellipse cx="162" cy="366" rx="44" ry="29" fill="url(#peacockBody)" transform="rotate(-12,162,366)" filter="url(#glowFilter)"/>
-        <!-- Wing arc — lighter sweep on body upper surface -->
-        <path d="M 132,352 C 150,340 174,337 193,348" stroke="rgba(50,210,150,0.38)" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <!-- Secondary wing feather lines -->
-        <path d="M 136,358 C 155,350 172,348 190,356" stroke="rgba(30,160,110,0.28)" stroke-width="3" fill="none"/>
-        <path d="M 138,366 C 156,360 172,360 188,366" stroke="rgba(30,160,110,0.22)" stroke-width="2" fill="none"/>
-        <!-- Underbelly shading -->
-        <path d="M 133,382 C 148,390 165,393 180,388 C 170,398 150,400 133,392 Z" fill="#062218" opacity="0.55"/>
-
-        <!-- Neck (elegant S-curve, deep emerald) -->
-        <path d="M 182,352 C 194,334 195,312 189,293 C 184,276 177,260 172,245"
-              stroke="url(#peacockNeck)" stroke-width="18" fill="none" stroke-linecap="round"/>
-        <!-- Neck iridescent highlight -->
-        <path d="M 185,348 C 194,331 194,311 188,292 C 183,276 177,261 173,247"
-              stroke="rgba(60,220,150,0.18)" stroke-width="8" fill="none" stroke-linecap="round"/>
-
-        <!-- Head -->
-        <circle cx="171" cy="236" r="19" fill="#176452"/>
-        <ellipse cx="164" cy="230" rx="9" ry="7" fill="rgba(50,200,130,0.22)"/>
-
-        <!-- Crown — 5 plumes with gold tips -->
-        <path d="M 171,217 C 167,204 164,194 166,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
-        <circle cx="166" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
-        <path d="M 171,217 C 175,204 178,194 177,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
-        <circle cx="177" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
-        <path d="M 171,217 C 162,206 158,197 160,191" stroke="#22be88" stroke-width="2" fill="none"/>
-        <circle cx="160" cy="189" r="4" fill="#ffd700" opacity="0.86"/>
-        <path d="M 171,217 C 183,207 187,198 185,192" stroke="#22be88" stroke-width="2" fill="none"/>
-        <circle cx="185" cy="190" r="4" fill="#ffd700" opacity="0.86"/>
-        <path d="M 171,217 C 154,210 150,203 152,197" stroke="#20b082" stroke-width="1.8" fill="none"/>
-        <circle cx="152" cy="195" r="3.2" fill="#ffd700" opacity="0.78"/>
-
-        <!-- Eye (bright amber iris, facing right) -->
-        <circle cx="181" cy="232" r="7" fill="#0a0808"/>
-        <circle cx="181" cy="232" r="4.5" fill="#226040"/>
-        <circle cx="181" cy="232" r="2.8" fill="#ffd700"/>
-        <circle cx="182" cy="231" r="1.3" fill="white" opacity="0.88"/>
-
-        <!-- Beak (facing right toward sacred fire) -->
-        <path d="M 189,231 C 202,227 210,229 208,234 C 206,238 192,238 189,234 Z" fill="#d4a820"/>
-        <path d="M 189,234 C 202,235 209,233 207,238 C 205,241 191,240 189,237 Z" fill="#a87818" opacity="0.65"/>
-
-        <!-- Feet (three-toed, on the ground) -->
-        <path d="M 146,392 L 138,416" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
-        <path d="M 138,416 L 130,422 M 138,416 L 141,423 M 138,416 L 147,420" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
-        <path d="M 160,394 L 152,418" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
-        <path d="M 152,418 L 144,424 M 152,418 L 155,425 M 152,418 L 162,421" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- ════ RIGHT PEACOCK — tail fan ════ -->
-        <g transform="translate(532,360)">
-          <use href="#pfBase" transform="rotate(45)" opacity="0.80"/>
-          <use href="#pfBase" transform="rotate(34)" opacity="0.85"/>
-          <use href="#pfBase" transform="rotate(23)" opacity="0.90"/>
-          <use href="#pfBase" transform="rotate(12)" opacity="0.94"/>
-          <use href="#pfBase" transform="rotate(1)"/>
-          <use href="#pfBase" transform="rotate(-10)"/>
-          <use href="#pfBase" transform="rotate(-21)" opacity="0.94"/>
-          <use href="#pfBase" transform="rotate(-31)" opacity="0.88"/>
-          <use href="#pfBase" transform="rotate(-40)" opacity="0.80"/>
+        <!-- ════ RIGHT LOTUS — Sacred Bloom of the Mandap ════ -->
+        <g transform="translate(488,278)">
+          <!-- Ambient petal glow -->
+          <ellipse cx="0" cy="-18" rx="62" ry="65" fill="url(#lotusGlow)"/>
+          <!-- Outer petals (8 — different phase offsets from left lotus) -->
+          <ellipse cx="0" cy="-41" rx="13" ry="36" fill="#d45070" opacity="0.55" transform="rotate(3)"/>
+          <ellipse cx="0" cy="-39" rx="11" ry="38" fill="#c04868" opacity="0.52" transform="rotate(45)"/>
+          <ellipse cx="0" cy="-42" rx="14" ry="37" fill="#d45070" opacity="0.57" transform="rotate(88)"/>
+          <ellipse cx="0" cy="-38" rx="12" ry="35" fill="#c04868" opacity="0.53" transform="rotate(133)"/>
+          <ellipse cx="0" cy="-40" rx="13" ry="39" fill="#d45070" opacity="0.55" transform="rotate(176)"/>
+          <ellipse cx="0" cy="-37" rx="11" ry="36" fill="#c04868" opacity="0.51" transform="rotate(220)"/>
+          <ellipse cx="0" cy="-43" rx="14" ry="38" fill="#d45070" opacity="0.56" transform="rotate(263)"/>
+          <ellipse cx="0" cy="-39" rx="12" ry="35" fill="#c04868" opacity="0.54" transform="rotate(307)"/>
+          <!-- Mid petals (8 — soft rose) -->
+          <ellipse cx="0" cy="-29" rx="12" ry="27" fill="#f5a8bc" opacity="0.70" transform="rotate(20)"/>
+          <ellipse cx="0" cy="-31" rx="10" ry="29" fill="#f09ab0" opacity="0.73" transform="rotate(63)"/>
+          <ellipse cx="0" cy="-28" rx="11" ry="26" fill="#f5a8bc" opacity="0.68" transform="rotate(107)"/>
+          <ellipse cx="0" cy="-30" rx="12" ry="28" fill="#f09ab0" opacity="0.71" transform="rotate(152)"/>
+          <ellipse cx="0" cy="-27" rx="10" ry="27" fill="#f5a8bc" opacity="0.70" transform="rotate(197)"/>
+          <ellipse cx="0" cy="-32" rx="11" ry="30" fill="#f09ab0" opacity="0.74" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-29" rx="12" ry="26" fill="#f5a8bc" opacity="0.69" transform="rotate(285)"/>
+          <ellipse cx="0" cy="-30" rx="10" ry="29" fill="#f09ab0" opacity="0.72" transform="rotate(328)"/>
+          <!-- Inner petals (6 — pale blush) -->
+          <ellipse cx="0" cy="-19" rx="9"  ry="18" fill="#ffdae6" opacity="0.82" transform="rotate(30)"/>
+          <ellipse cx="0" cy="-18" rx="8"  ry="19" fill="#fcc8d8" opacity="0.85" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-20" rx="9"  ry="17" fill="#ffdae6" opacity="0.80" transform="rotate(150)"/>
+          <ellipse cx="0" cy="-18" rx="8"  ry="18" fill="#fcc8d8" opacity="0.83" transform="rotate(210)"/>
+          <ellipse cx="0" cy="-19" rx="7"  ry="19" fill="#ffdae6" opacity="0.82" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-20" rx="9"  ry="17" fill="#fcc8d8" opacity="0.84" transform="rotate(330)"/>
+          <!-- Centre petals (5 — cream-gold) -->
+          <ellipse cx="0" cy="-11" rx="7"  ry="12" fill="#fff0c8" opacity="0.90" transform="rotate(36)"/>
+          <ellipse cx="0" cy="-12" rx="6"  ry="13" fill="#ffe8b0" opacity="0.88" transform="rotate(108)"/>
+          <ellipse cx="0" cy="-10" rx="7"  ry="11" fill="#fff0c8" opacity="0.86" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-11" rx="6"  ry="12" fill="#ffe8b0" opacity="0.89" transform="rotate(252)"/>
+          <ellipse cx="0" cy="-12" rx="5"  ry="13" fill="#fff0c8" opacity="0.87" transform="rotate(324)"/>
+          <!-- Gold centre receptacle -->
+          <circle cx="0" cy="0" r="13" fill="#b86008" opacity="0.90"/>
+          <circle cx="0" cy="0" r="9"  fill="#ffd700" opacity="0.95"/>
+          <circle cx="0" cy="0" r="5"  fill="#ffe880"/>
+          <circle cx="0" cy="0" r="2"  fill="#c8780a"/>
+          <!-- Stamen ring -->
+          <circle cx="0"    cy="-11"  r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="7.8"  cy="-7.8" r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="11"   cy="0"    r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="7.8"  cy="7.8"  r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="0"    cy="11"   r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="-7.8" cy="7.8"  r="1.5" fill="#ffd700" opacity="0.86"/>
+          <circle cx="-11"  cy="0"    r="1.7" fill="#ffd700" opacity="0.90"/>
+          <circle cx="-7.8" cy="-7.8" r="1.5" fill="#ffd700" opacity="0.86"/>
         </g>
-        <ellipse cx="550" cy="300" rx="70" ry="80" fill="rgba(20,140,100,0.06)"/>
 
-        <!-- ════ RIGHT PEACOCK — body, neck, head (mirrored) ════ -->
-        <ellipse cx="544" cy="366" rx="16" ry="18" fill="#082c20" opacity="0.6"/>
-        <ellipse cx="518" cy="366" rx="44" ry="29" fill="url(#peacockBody)" transform="rotate(12,518,366)" filter="url(#glowFilter)"/>
-        <path d="M 487,348 C 506,337 530,340 548,352" stroke="rgba(50,210,150,0.38)" stroke-width="5" fill="none" stroke-linecap="round"/>
-        <path d="M 490,358 C 508,350 526,348 544,356" stroke="rgba(30,160,110,0.28)" stroke-width="3" fill="none"/>
-        <path d="M 492,366 C 508,360 524,360 542,366" stroke="rgba(30,160,110,0.22)" stroke-width="2" fill="none"/>
-        <path d="M 500,388 C 515,393 532,390 547,382 C 530,400 510,400 497,392 Z" fill="#062218" opacity="0.55"/>
-
-        <!-- Neck (facing left) -->
-        <path d="M 498,352 C 486,334 485,312 491,293 C 496,276 503,260 508,245"
-              stroke="url(#peacockNeck)" stroke-width="18" fill="none" stroke-linecap="round"/>
-        <path d="M 495,348 C 486,331 486,311 492,292 C 497,276 503,261 507,247"
-              stroke="rgba(60,220,150,0.18)" stroke-width="8" fill="none" stroke-linecap="round"/>
-
-        <!-- Head -->
-        <circle cx="509" cy="236" r="19" fill="#176452"/>
-        <ellipse cx="516" cy="230" rx="9" ry="7" fill="rgba(50,200,130,0.22)"/>
-
-        <!-- Crown (mirrored) -->
-        <path d="M 509,217 C 513,204 516,194 514,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
-        <circle cx="514" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
-        <path d="M 509,217 C 505,204 502,194 503,187" stroke="#22be88" stroke-width="2.2" fill="none"/>
-        <circle cx="503" cy="185" r="5" fill="#ffd700" opacity="0.93"/>
-        <path d="M 509,217 C 518,206 522,197 520,191" stroke="#22be88" stroke-width="2" fill="none"/>
-        <circle cx="520" cy="189" r="4" fill="#ffd700" opacity="0.86"/>
-        <path d="M 509,217 C 497,207 493,198 495,192" stroke="#22be88" stroke-width="2" fill="none"/>
-        <circle cx="495" cy="190" r="4" fill="#ffd700" opacity="0.86"/>
-        <path d="M 509,217 C 526,210 530,203 528,197" stroke="#20b082" stroke-width="1.8" fill="none"/>
-        <circle cx="528" cy="195" r="3.2" fill="#ffd700" opacity="0.78"/>
-
-        <!-- Eye (facing left) -->
-        <circle cx="499" cy="232" r="7" fill="#0a0808"/>
-        <circle cx="499" cy="232" r="4.5" fill="#226040"/>
-        <circle cx="499" cy="232" r="2.8" fill="#ffd700"/>
-        <circle cx="498" cy="231" r="1.3" fill="white" opacity="0.88"/>
-
-        <!-- Beak (facing left toward fire) -->
-        <path d="M 491,231 C 478,227 470,229 472,234 C 474,238 488,238 491,234 Z" fill="#d4a820"/>
-        <path d="M 491,234 C 478,235 471,233 473,238 C 475,241 489,240 491,237 Z" fill="#a87818" opacity="0.65"/>
-
-        <!-- Feet (mirrored) -->
-        <path d="M 534,392 L 542,416" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
-        <path d="M 542,416 L 550,422 M 542,416 L 539,423 M 542,416 L 533,420" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
-        <path d="M 520,394 L 528,418" stroke="#6a4820" stroke-width="3" stroke-linecap="round"/>
-        <path d="M 528,418 L 536,424 M 528,418 L 525,425 M 528,418 L 518,421" stroke="#6a4820" stroke-width="2" stroke-linecap="round"/>
-
-        <!-- ════ CROWN-TO-CROWN MARIGOLD GARLAND ════ -->
-        <!-- Arcing between peacock crowns over the sacred fire -->
-        <path d="M 171,218 C 230,172 286,160 340,158 C 394,160 450,172 509,218"
-              stroke="#3a5818" stroke-width="2.5" fill="none" opacity="0.52" stroke-dasharray="3,3"/>
-        <!-- Marigold blooms along garland -->
-        <circle cx="198" cy="197" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="198" cy="197" r="3" fill="#ffd700"/>
-        <circle cx="224" cy="183" r="6" fill="#ffd700" opacity="0.9"/><circle cx="224" cy="183" r="3" fill="#ff8c00"/>
-        <circle cx="252" cy="172" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="252" cy="172" r="3" fill="#ffd700"/>
-        <circle cx="282" cy="165" r="6.5" fill="white" opacity="0.9"/><circle cx="282" cy="165" r="3.2" fill="#ffd700"/>
-        <circle cx="311" cy="160" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="311" cy="160" r="3" fill="#ffd700"/>
-        <circle cx="340" cy="158" r="8" fill="white" opacity="0.93"/><circle cx="340" cy="158" r="4" fill="#ffd700"/>
-        <circle cx="369" cy="160" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="369" cy="160" r="3" fill="#ffd700"/>
-        <circle cx="398" cy="165" r="6.5" fill="white" opacity="0.9"/><circle cx="398" cy="165" r="3.2" fill="#ffd700"/>
-        <circle cx="428" cy="172" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="428" cy="172" r="3" fill="#ffd700"/>
-        <circle cx="456" cy="183" r="6" fill="#ffd700" opacity="0.9"/><circle cx="456" cy="183" r="3" fill="#ff8c00"/>
-        <circle cx="482" cy="197" r="6" fill="#ff8c00" opacity="0.88"/><circle cx="482" cy="197" r="3" fill="#ffd700"/>
+        <!-- ════ MARIGOLD ARCH — connecting the two sacred lotuses ════ -->
+        <path d="M 192,238 C 252,192 298,178 340,175 C 382,178 428,192 488,238"
+              stroke="rgba(45,110,25,0.50)" stroke-width="2.2" fill="none" stroke-dasharray="4,3"/>
+        <circle cx="218" cy="220" r="5"   fill="#ff8fab" opacity="0.82"/><circle cx="218" cy="220" r="2.5" fill="#ffd700"/>
+        <circle cx="252" cy="203" r="5"   fill="#ffd700" opacity="0.85"/><circle cx="252" cy="203" r="2.5" fill="#ff8c00"/>
+        <circle cx="288" cy="189" r="5.5" fill="white"   opacity="0.88"/><circle cx="288" cy="189" r="2.8" fill="#ffd700"/>
+        <circle cx="340" cy="175" r="7.5" fill="white"   opacity="0.90"/><circle cx="340" cy="175" r="3.8" fill="#ffd700"/>
+        <circle cx="392" cy="189" r="5.5" fill="white"   opacity="0.88"/><circle cx="392" cy="189" r="2.8" fill="#ffd700"/>
+        <circle cx="428" cy="203" r="5"   fill="#ffd700" opacity="0.85"/><circle cx="428" cy="203" r="2.5" fill="#ff8c00"/>
+        <circle cx="462" cy="220" r="5"   fill="#ff8fab" opacity="0.82"/><circle cx="462" cy="220" r="2.5" fill="#ffd700"/>
 
         <!-- ── DECORATIVE ELEMENTS ── -->
         <!-- Flower petals scattered (artistic) -->
