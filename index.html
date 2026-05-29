@@ -132,8 +132,15 @@ section{position:relative;z-index:2;overflow:hidden}
 .couple-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--maroon);opacity:.6;letter-spacing:3px;margin-top:8px}
 
 /* Floating petals above scene */
-.petal-float{position:absolute;font-size:20px;pointer-events:none;animation:petalDrift linear infinite;opacity:0}
-@keyframes petalDrift{0%{opacity:0;transform:translateY(-20px) rotate(0deg)}15%{opacity:.8}85%{opacity:.6}100%{opacity:0;transform:translateY(420px) rotate(540deg) translateX(var(--pdx,0px))}}
+.petal-float{position:absolute;pointer-events:none;animation:petalDrift linear infinite;opacity:0;display:flex;align-items:center;justify-content:center}
+@keyframes petalDrift{0%{opacity:0;transform:translateY(-20px) rotate(0deg)}15%{opacity:.85}85%{opacity:.55}100%{opacity:0;transform:translateY(440px) rotate(560deg) translateX(var(--pdx,0px))}}
+/* CSS petal shapes */
+.ps{width:13px;height:20px;border-radius:0% 100% 0% 100%;display:block}
+.ps-rose{background:radial-gradient(ellipse at 38% 30%,#ffccd8,#e8678a 88%);box-shadow:0 0 4px rgba(232,103,138,.3)}
+.ps-gold{background:radial-gradient(ellipse at 38% 30%,#ffe99a,#ffb347 88%);box-shadow:0 0 4px rgba(255,183,0,.3)}
+.ps-cream{background:radial-gradient(ellipse at 38% 30%,#fff6ec,#f0d4a8 88%)}
+/* Footer full names */
+.ft-names{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--amber);letter-spacing:5px;opacity:.75;margin:-6px 0 22px;position:relative;z-index:1}
 
 /* ── COUNTDOWN ── */
 .countdown-section{padding:110px 24px;text-align:center;background:radial-gradient(circle at 50% 50%,rgba(247,127,0,.07),transparent 55%),linear-gradient(180deg,var(--deep),var(--cosmos) 50%,var(--deep))}
@@ -188,7 +195,7 @@ section{position:relative;z-index:2;overflow:hidden}
 /* ── FOOTER ── */
 footer{background:var(--ink);text-align:center;padding:80px 24px 50px;position:relative;overflow:hidden}
 footer::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(200,120,10,.14),transparent 50%)}
-.gopuram-wrap{width:100%;max-width:750px;margin:0 auto 35px;position:relative;z-index:1;opacity:.18}
+.gopuram-wrap{width:100%;max-width:750px;margin:0 auto 35px;position:relative;z-index:1;opacity:.36}
 .ft-mono{font-family:'Allura',cursive;font-size:90px;color:var(--gold);line-height:1;text-shadow:0 0 30px rgba(255,215,0,.35);position:relative;z-index:1}
 .ft-dec{color:var(--gold);font-size:16px;letter-spacing:14px;margin:22px 0;opacity:.55}
 .ft-q{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--ivory);opacity:.8;letter-spacing:1px;position:relative;z-index:1;margin:12px 0}
@@ -300,12 +307,13 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     <div class="ceremony-wrap sr-s">
       <div class="ceremony-glow"></div>
 
-      <!-- Floating petals -->
-      <div class="petal-float" style="left:10%;top:0;animation-duration:7s;animation-delay:0s;--pdx:-20px">🌸</div>
-      <div class="petal-float" style="left:25%;top:0;animation-duration:8.5s;animation-delay:1.2s;--pdx:15px">🌺</div>
-      <div class="petal-float" style="left:60%;top:0;animation-duration:7.8s;animation-delay:0.5s;--pdx:-10px">🌸</div>
-      <div class="petal-float" style="left:75%;top:0;animation-duration:9s;animation-delay:2s;--pdx:25px">🌺</div>
-      <div class="petal-float" style="left:88%;top:0;animation-duration:6.5s;animation-delay:3s;--pdx:-15px">🌸</div>
+      <!-- Floating petals (CSS-drawn, no emoji) -->
+      <div class="petal-float" style="left:8%;top:0;animation-duration:7s;animation-delay:0s;--pdx:-20px"><span class="ps ps-rose"></span></div>
+      <div class="petal-float" style="left:22%;top:0;animation-duration:8.5s;animation-delay:1.2s;--pdx:15px"><span class="ps ps-gold"></span></div>
+      <div class="petal-float" style="left:40%;top:0;animation-duration:9.5s;animation-delay:2.5s;--pdx:-8px"><span class="ps ps-cream"></span></div>
+      <div class="petal-float" style="left:60%;top:0;animation-duration:7.8s;animation-delay:0.5s;--pdx:-10px"><span class="ps ps-rose"></span></div>
+      <div class="petal-float" style="left:76%;top:0;animation-duration:9s;animation-delay:2s;--pdx:25px"><span class="ps ps-gold"></span></div>
+      <div class="petal-float" style="left:90%;top:0;animation-duration:6.5s;animation-delay:3s;--pdx:-15px"><span class="ps ps-cream"></span></div>
 
       <!-- ===== SACRED FIRE CEREMONY — Saptapadi ===== -->
       <svg class="ceremony-scene" viewBox="0 0 680 500" xmlns="http://www.w3.org/2000/svg">
@@ -683,9 +691,61 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     <div class="sec-eyebrow sr" style="color:var(--copper)">Mark Your Calendars</div>
     <div class="sec-headline sr" style="color:var(--maroon);margin-bottom:60px">The Sacred Details</div>
     <div class="d-grid">
-      <div class="d-card sr"><span class="d-icon">📅</span><div class="d-eyebrow">The Date</div><div class="d-main">Wednesday<br>17th June, 2026</div><div class="d-note">A blessed day chosen for new beginnings</div></div>
-      <div class="d-card sr"><span class="d-icon">🔥</span><div class="d-eyebrow">The Muhurtham</div><div class="d-main">9:30 AM<br>to 10:30 AM</div><div class="d-note">Auspicious morning muhurtham — witnessed by sacred fire</div></div>
-      <div class="d-card sr"><span class="d-icon">📍</span><div class="d-eyebrow">The Venue</div><div class="d-main">Illathu Pillamar Sanga<br>Kalyana Mandapam</div><div class="d-note">Srivilliputhur, Tamil Nadu</div><a href="https://www.google.com/maps/dir/?api=1&destination=9.5175586,77.6315521" target="_blank" class="map-link">View on Map →</a></div>
+      <div class="d-card sr">
+        <span class="d-icon">
+          <!-- Calendar icon -->
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="8" width="46" height="41" rx="5" stroke="#c8780a" stroke-width="1.8" fill="rgba(200,120,10,0.06)"/>
+            <rect x="3" y="8" width="46" height="12" rx="5" fill="rgba(200,120,10,0.16)"/>
+            <path d="M3,20 L49,20" stroke="#c8780a" stroke-width="1.3"/>
+            <rect x="14" y="2" width="4" height="12" rx="2" fill="#c8780a"/>
+            <rect x="34" y="2" width="4" height="12" rx="2" fill="#c8780a"/>
+            <circle cx="36" cy="35" r="9.5" fill="rgba(122,0,28,0.10)" stroke="#7a001c" stroke-width="1" opacity=".55"/>
+            <text x="36" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#7a001c" font-weight="bold">17</text>
+            <circle cx="12" cy="28" r="1.6" fill="#c8780a" opacity=".45"/>
+            <circle cx="20" cy="28" r="1.6" fill="#c8780a" opacity=".45"/>
+            <circle cx="12" cy="36" r="1.6" fill="#c8780a" opacity=".45"/>
+            <circle cx="20" cy="36" r="1.6" fill="#c8780a" opacity=".45"/>
+            <circle cx="12" cy="44" r="1.6" fill="#c8780a" opacity=".35"/>
+            <circle cx="20" cy="44" r="1.6" fill="#c8780a" opacity=".35"/>
+            <circle cx="28" cy="44" r="1.6" fill="#c8780a" opacity=".35"/>
+          </svg>
+        </span>
+        <div class="d-eyebrow">The Date</div><div class="d-main">Wednesday<br>17th June, 2026</div><div class="d-note">A blessed day chosen for new beginnings</div>
+      </div>
+      <div class="d-card sr">
+        <span class="d-icon">
+          <!-- Rising sun / muhurtham icon -->
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="30" r="12" stroke="#c8780a" stroke-width="1.8" fill="rgba(200,120,10,0.09)"/>
+            <circle cx="26" cy="30" r="7" fill="rgba(200,120,10,0.22)"/>
+            <circle cx="26" cy="30" r="3.5" fill="rgba(200,120,10,0.42)"/>
+            <path d="M26,4 L26,12" stroke="#c8780a" stroke-width="2" stroke-linecap="round"/>
+            <path d="M10,12 L16,18" stroke="#c8780a" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M42,12 L36,18" stroke="#c8780a" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M4,28 L12,28" stroke="#c8780a" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M40,28 L48,28" stroke="#c8780a" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M4,43 L48,43" stroke="#c8780a" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
+            <text x="26" y="51" text-anchor="middle" font-family="Georgia,serif" font-size="6.5" fill="#c8780a" letter-spacing="1">9:30 AM</text>
+          </svg>
+        </span>
+        <div class="d-eyebrow">The Muhurtham</div><div class="d-main">9:30 AM<br>to 10:30 AM</div><div class="d-note">Auspicious morning muhurtham — witnessed by sacred fire</div>
+      </div>
+      <div class="d-card sr">
+        <span class="d-icon">
+          <!-- Location pin with mandapam icon -->
+          <svg width="52" height="52" viewBox="0 0 52 52" fill="none" style="display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26,2 C15,2 7,10 7,21 C7,36 26,52 26,52 C26,52 45,36 45,21 C45,10 37,2 26,2Z" stroke="#c8780a" stroke-width="1.8" fill="rgba(200,120,10,0.07)"/>
+            <circle cx="26" cy="21" r="10" stroke="#7a001c" stroke-width="1" fill="rgba(122,0,28,0.10)" opacity=".8"/>
+            <!-- Mandapam / temple shape inside pin -->
+            <path d="M20,26 L32,26" stroke="#7a001c" stroke-width="1.3" opacity=".65"/>
+            <path d="M22,26 L22,21 L24,19 L26,16 L28,19 L30,21 L30,26" stroke="#7a001c" stroke-width="1.1" fill="rgba(122,0,28,0.22)" opacity=".8"/>
+            <circle cx="26" cy="14" r="2.2" fill="#7a001c" opacity=".65"/>
+            <path d="M21,21 L31,21" stroke="#7a001c" stroke-width="0.8" opacity=".4"/>
+          </svg>
+        </span>
+        <div class="d-eyebrow">The Venue</div><div class="d-main">Illathu Pillamar Sanga<br>Kalyana Mandapam</div><div class="d-note">Srivilliputhur, Tamil Nadu</div><a href="https://www.google.com/maps/dir/?api=1&destination=9.5175586,77.6315521" target="_blank" class="map-link">View on Map →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -738,10 +798,13 @@ footer::before{content:'';position:absolute;inset:0;background:radial-gradient(e
     </svg>
   </div>
   <div class="ft-mono">M ❦ S</div>
+  <p class="ft-names">Muthu Narendran &amp; Sumathi</p>
   <div class="ft-dec">✦ ❦ ✦</div>
-  <p class="ft-q">"And they lived happily ever after..."</p>
+  <p class="ft-q">"Two lives, one sacred fire — bound by love, blessed by stars."</p>
   <div class="ft-dec">✦ ❦ ✦</div>
-  <p class="ft-q" style="font-size:15px">With Best Compliments From</p>
+  <p class="ft-q" style="font-size:15px">Wednesday · 17th June 2026 · Srivilliputhur</p>
+  <div class="ft-dec" style="font-size:12px;letter-spacing:8px;margin:14px 0 6px">✦</div>
+  <p class="ft-q" style="font-size:14px;opacity:.6">With Best Compliments From</p>
   <p class="ft-tag">Friends &amp; Family</p>
 </footer>
 </div>
